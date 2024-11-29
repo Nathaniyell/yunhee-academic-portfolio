@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className={`${GeistSans.className}`}>
         <div className="flex min-h-screen">
           <Sidebar />
-          <main className="flex-1 p-8 bg-white">
+          <main className="flex-1 p-8 bg-white mt-14 md:mt-0">
             {children}
           </main>
         </div>
