@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { UserRound } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -20,14 +21,15 @@ const navigation = [
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true)
+  const pathname = usePathname()
 
   return (
     <>
       {/* Add a fixed header background for mobile */}
-      <div className="fixed top-0 left-0 right-0 h-16 bg-blue-600 z-10 md:hidden" />
+      <div className="fixed top-0 left-0 right-0 h-16 bg-blue-600 z-10 lg:hidden" />
 
       {/* Persistent image container - always visible on mobile */}
-      <div className="fixed top-4 left-4 z-20 md:hidden">
+      <div className="fixed top-4 left-4 z-20 lg:hidden">
         {/* <Image
           src="/placeholder.svg"
           alt="Profile"
@@ -41,7 +43,7 @@ export default function Sidebar() {
       {/* Toggle button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 right-4 z-20 md:hidden p-2 rounded-md"
+        className="fixed top-4 right-4 z-20 lg:hidden p-2 rounded-md"
       >
         <svg 
           className="w-6 h-6 text-white"
@@ -62,11 +64,12 @@ export default function Sidebar() {
         fixed top-0 left-0 z-10
         w-64 bg-blue-600 text-white h-screen
         transform transition-transform duration-200 ease-in-out
-        md:translate-x-0 overflow-y-auto
+        lg:translate-x-0 overflow-y-auto 
+        lg:[&::-webkit-scrollbar]:hidden lg:scrollbar-hide
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
-        <div className="min-h-full p-4 pt-20 md:pt-4">
-          <div className="hidden md:flex items-center justify-center mb-8">
+        <div className="min-h-full p-4 pt-20 lg:pt-4">
+          <div className="hidden lg:flex items-center justify-center mb-8">
             {/* <Image
               src="/placeholder.svg"
               alt="Profile"
@@ -85,7 +88,8 @@ export default function Sidebar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 text-center"
+                className={`block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 text-center
+                  ${pathname === item.href ? 'bg-yellow-400 text-blue-900' : ''}`}
               >
                 {item.name}
               </Link>
