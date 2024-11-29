@@ -39,7 +39,7 @@ export default function Sidebar() {
             <UserRound className="w-16 h-16 text-white bg-blue-600 rounded-full p-2" />
           </div>
           <div className="text-center my-8">
-            <h2 className="font-bold">Name</h2>
+            <h2 className="font-bold">Yunhee Lee</h2>
             <p className="text-sm">Ph.D. | Position | Industry Cities</p>
           </div>
           <nav className="space-y-1 pb-20">
