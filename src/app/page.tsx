@@ -6,7 +6,7 @@ export default function Home() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-blue-600 mb-8">WELCOME TO MY PORTFOLIO</h1>
         <p className="text-lg mb-4">
-          Hello! I'm <span className="font-semibold">Name</span>, a{' '}
+          Hello! I&apos;m <span className="font-semibold">Yunhee Lee</span>, a{' '}
           <span className="italic">Ph.D. Assistant Research Professor</span> in{' '}
           <span className="font-semibold">Department</span> at the University .....
         </p>
@@ -49,7 +49,7 @@ export default function Home() {
         </h2>
         <div className="border-t-4 border-yellow-400 w-48 mb-4"></div>
         <p>
-          Let's build the cities of tomorrow! Reach out via my{' '}
+          Let&apos;s build the cities of tomorrow! Reach out via my{' '}
           <Link href="/contact" className="text-blue-600 hover:underline">
             contact page
           </Link>{' '}
