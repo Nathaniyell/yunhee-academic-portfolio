@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { useEffect, useState } from 'react'
 import { BookOpen } from 'lucide-react'
 import Link from 'next/link'
-import HeroBg from "../../public/images/herobg.jpeg"
+import HeroBg from "/public/images/herobg.jpeg"
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false)
