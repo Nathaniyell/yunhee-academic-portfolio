@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Award, Lightbulb } from 'lucide-react'
-import { LinkedInIcon } from './contact/page'
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
@@ -190,7 +189,7 @@ function ContactSection() {
         <Card className="mt-8 bg-white/50 backdrop-blur-sm shadow-lg">
           <CardContent className="pt-6">
             <p className="text-lg text-slate-500 mb-6">
-              Let&apos;s collaborate on building sustainable, smart cities for tomorrow! Reach out via my <Link href="/contact" className="text-blue-600">contact page</Link> or connect on <Link href="" className="text-blue-600" target="_blank" rel="noopener noreferrer"><LinkedInIcon className="inline h-5 w-5 mr-1" />LinkedIn</Link>
+              Let&apos;s collaborate on building sustainable, smart cities for tomorrow! Reach out via my <Link href="/contact" className="text-blue-600">contact page</Link> or connect on <Link href="" className="text-blue-600" target="_blank" rel="noopener noreferrer">LinkedIn</Link>
             </p>
           </CardContent>
         </Card>
