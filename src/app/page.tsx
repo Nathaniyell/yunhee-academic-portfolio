@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Award, Lightbulb, BookOpen } from 'lucide-react'
-import { LinkedInIcon } from './contact/page' 
+import { LinkedInIcon } from './contact/page'
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
@@ -35,8 +35,8 @@ function AboutSection() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-3xl font-bold mb-4">Hello! I'm <span className="text-blue-600">Yunhee Lee</span></h1>
-            <p className="text-lg text-muted-foreground mb-6">
-              A Ph.D. Assistant Research Professor in Department of ... at the ... University. From optimizing data analytics, 
+            <p className="text-lg text-slate-500 mb-6">
+              A Ph.D. Assistant Research Professor in Department of ... at the ... University. From optimizing data analytics,
               machine learning, and urban planning to bridge the gap between research and impactful real-world applications.
             </p>
             <Button asChild variant="outline" className="text-blue-600">
@@ -82,7 +82,7 @@ function ResearchInterests() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{interest.description}</p>
+                  <p className="text-slate-500">{interest.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -105,10 +105,10 @@ function Achievements() {
             <div className="flex items-start space-x-4">
               <Award className="h-10 w-10 text-yellow-500 flex-shrink-0 mt-1" />
               <div>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-slate-500 mb-4">
                   I am honored to have received several awards for my contributions to urban planning and sustainability research, including:
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <ul className="list-disc list-inside space-y-2 text-slate-500">
                   <motion.li animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ delay: 0.2 }}>
                     Urban Innovation Award 2023
                   </motion.li>
@@ -126,9 +126,9 @@ function Achievements() {
                     </>
                   )}
                 </ul>
-                <Button 
-                  variant="link" 
-                  onClick={() => setIsExpanded(!isExpanded)} 
+                <Button
+                  variant="link"
+                  onClick={() => setIsExpanded(!isExpanded)}
                   className="mt-4 p-0 h-auto font-semibold text-blue-600"
                 >
                   {isExpanded ? 'Show less' : 'Show more'}
@@ -152,9 +152,9 @@ function RecentPublications() {
   return (
     <section className="px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
           <SectionHeader title="Recent Publications" />
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" className="w-fit">
             <Link href="/publications" className="text-blue-600 hover:text-blue-700 inline-flex items-center">
               View all <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
@@ -169,7 +169,7 @@ function RecentPublications() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">{pub.journal}</span>
+                    <span className="text-slate-500">{pub.journal}</span>
                     <Badge variant="secondary" className="bg-blue-100 text-blue-600">{pub.year}</Badge>
                   </div>
                 </CardContent>

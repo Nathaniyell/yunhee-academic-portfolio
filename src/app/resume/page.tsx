@@ -94,32 +94,34 @@ export default function Resume() {
         </motion.div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 border rounded-lg p-1 bg-white shadow-sm mb-6">
-            <TabsTrigger 
-              value="overview" 
-              className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
-            >
-              Overview
-            </TabsTrigger>
-            <TabsTrigger 
-              value="experience" 
-              className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
-            >
-              Experience
-            </TabsTrigger>
-            <TabsTrigger 
-              value="education" 
-              className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
-            >
-              Education
-            </TabsTrigger>
-            <TabsTrigger 
-              value="skills" 
-              className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
-            >
-              Skills
-            </TabsTrigger>
-          </TabsList>
+          <div className="px-1">
+            <TabsList className="flex min-w-full border rounded-lg p-1 bg-white shadow-sm mb-6 overflow-x-auto">
+              <TabsTrigger 
+                value="overview" 
+                className="ml-8 md:ml-0 flex-1 min-w-[100px] data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700 rounded-md"
+              >
+                Overview
+              </TabsTrigger>
+              <TabsTrigger 
+                value="experience" 
+                className="flex-1 min-w-[100px] data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
+              >
+                Experience
+              </TabsTrigger>
+              <TabsTrigger 
+                value="education" 
+                className="flex-1 min-w-[100px] data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
+              >
+                Education
+              </TabsTrigger>
+              <TabsTrigger 
+                value="skills" 
+                className="flex-1 min-w-[100px] data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
+              >
+                Skills
+              </TabsTrigger>
+            </TabsList>
+          </div>
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}

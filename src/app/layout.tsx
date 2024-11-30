@@ -3,6 +3,8 @@ import { GeistSans } from "geist/font/sans";
 import './globals.css'
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Suspense } from 'react';
+import LoadingSpinner from '@/components/ui/loading-spinner';
 
 
 export const metadata: Metadata = {
@@ -21,7 +23,9 @@ export default function RootLayout({
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1 mt-10">
-            {children}
+            <Suspense fallback={<LoadingSpinner />}>
+              {children}
+            </Suspense>
           </main>
           <Footer />
         </div>

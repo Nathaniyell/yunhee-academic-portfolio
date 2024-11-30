@@ -22,7 +22,7 @@ export default function PublicationsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12">
       <div className="max-w-4xl mx-auto px-4">
-        <motion.h1 
+        <motion.h1
           className="text-4xl font-bold text-blue-600 mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export default function PublicationsPage() {
           Publications
         </motion.h1>
 
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -58,7 +58,7 @@ export default function PublicationsPage() {
             )}
           </div>
           {searchTerm && (
-            <div className="text-sm text-muted-foreground mt-2">
+            <div className="text-sm text-slate-500 mt-2">
               Showing {filteredPublications.length} of {publications.length} publications
             </div>
           )}
@@ -83,8 +83,8 @@ export default function PublicationsPage() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-muted-foreground mb-2">{publication.journal}</p>
-                      <p className="text-muted-foreground mb-4">{publication.description}</p>
+                      <p className="text-sm text-slate-500 mb-2">{publication.journal}</p>
+                      <p className="text-slate-500 mb-4">{publication.description}</p>
                       <Button asChild variant="link" className="p-0">
                         <Link href={publication.link} className="flex items-center text-blue-600 hover:text-blue-800">
                           Read Paper <ChevronRight className="ml-1 h-4 w-4" />
@@ -101,7 +101,7 @@ export default function PublicationsPage() {
                 exit={{ opacity: 0 }}
                 className="text-center py-8"
               >
-                <p className="text-muted-foreground">No publications found matching <span className="font-bold">{searchTerm}</span></p>
+                <p className="text-slate-500">No publications found matching <span className="font-bold">{searchTerm}</span></p>
               </motion.div>
             )}
           </AnimatePresence>

@@ -24,7 +24,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12">
       <div className="max-w-4xl mx-auto px-4">
-        <motion.h1 
+        <motion.h1
           className="text-4xl font-bold text-blue-600 mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function BlogPage() {
           Blog Articles
         </motion.h1>
 
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -60,7 +60,7 @@ export default function BlogPage() {
             )}
           </div>
           {searchTerm && (
-            <div className="text-sm text-muted-foreground mt-2">
+            <div className="text-sm text-slate-500 mt-2">
               Showing {filteredArticles.length} of {blogArticles.length} articles
             </div>
           )}
@@ -85,7 +85,7 @@ export default function BlogPage() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground mb-4">{article.tldr}</p>
+                      <p className="text-slate-500 mb-4">{article.tldr}</p>
                       <Button asChild variant="link" className="p-0">
                         <Link href={article.link} className="flex items-center text-blue-600 hover:text-blue-800">
                           Read More <ChevronRight className="ml-1 h-4 w-4" />
@@ -102,7 +102,7 @@ export default function BlogPage() {
                 exit={{ opacity: 0 }}
                 className="text-center py-8"
               >
-                <p className="text-muted-foreground">No articles found matching "{searchTerm}"</p>
+                <p className="text-slate-500">No articles found matching "{searchTerm}"</p>
               </motion.div>
             )}
           </AnimatePresence>
