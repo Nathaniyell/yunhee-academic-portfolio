@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { useEffect, useState } from 'react'
 import { BookOpen } from 'lucide-react'
 import Link from 'next/link'
+import HeroBg from "@/public/images/herobg.jpeg"
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -18,7 +19,7 @@ export default function HeroSection() {
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden">
       <Image
-        src="/images/herobg.jpeg"
+        src={HeroBg}
         alt="Academic background"
         layout="fill"
         objectFit="cover"
