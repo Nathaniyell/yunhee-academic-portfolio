@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Award, Lightbulb, BookOpen } from 'lucide-react'
+import { ArrowRight, Award, Lightbulb } from 'lucide-react'
 import { LinkedInIcon } from './contact/page'
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
@@ -34,7 +34,7 @@ function AboutSection() {
       <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 className="text-3xl font-bold mb-4">Hello! I'm <span className="text-blue-600">Yunhee Lee</span></h1>
+            <h1 className="text-3xl font-bold mb-4">Hello! I&apos;m <span className="text-blue-600">Yunhee Lee</span></h1>
             <p className="text-lg text-slate-500 mb-6">
               A Ph.D. Assistant Research Professor in Department of ... at the ... University. From optimizing data analytics,
               machine learning, and urban planning to bridge the gap between research and impactful real-world applications.

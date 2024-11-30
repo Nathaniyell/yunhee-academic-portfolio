@@ -102,7 +102,7 @@ export default function BlogPage() {
                 exit={{ opacity: 0 }}
                 className="text-center py-8"
               >
-                <p className="text-slate-500">No articles found matching "{searchTerm}"</p>
+                <p className="text-slate-500">No articles found matching &quot;{searchTerm}&quot;</p>
               </motion.div>
             )}
           </AnimatePresence>
