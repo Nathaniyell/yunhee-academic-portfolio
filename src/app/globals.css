@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+.hero-background {
+  background-image: url('/images/herobg.jpeg');
+  @apply bg-cover bg-center bg-no-repeat;
+}
+
+.shine-text {
+  background: linear-gradient(to right, #fff 20%, #ffcc00 40%, #ffcc00 60%, #fff 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }

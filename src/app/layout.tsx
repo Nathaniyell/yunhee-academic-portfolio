@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { GeistSans } from "geist/font/sans";
 import './globals.css'
-import Sidebar from '@/components/Sidebar'; 
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 
@@ -19,12 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${GeistSans.className}`}>
         <div className="flex min-h-screen flex-col">
-          <div className="flex flex-1">
-            <Sidebar />
-            <main className="flex-1 p-8 bg-white mt-16 lg:ml-60">
-              {children}
-            </main>
-          </div>
+          <Header />
+          <main className="flex-1 mt-10">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

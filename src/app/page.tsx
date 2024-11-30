@@ -1,65 +1,211 @@
-import Link from "next/link";
+'use client'
+
+import Link from 'next/link'
+import { useState } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Award, Lightbulb, BookOpen } from 'lucide-react'
+import { LinkedInIcon } from './contact/page' 
+import { motion } from 'framer-motion'
+import Hero from '@/components/Hero'
+import Image from 'next/image'
+import aboutImg from "@/public/images/about2.jpg"
 
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold text-blue-600 mb-8">WELCOME TO MY PORTFOLIO</h1>
-        <p className="text-lg mb-4">
-          Hello! I&apos;m <span className="font-semibold">Yunhee Lee</span>, a{' '}
-          <span className="italic">Ph.D. Assistant Research Professor</span> in{' '}
-          <span className="font-semibold">Department</span> at the University .....
-        </p>
-        <p className="text-lg mb-8">
-          From optimizing{' '}
-          <span className="font-semibold">
-            data analytics, machine learning,
-          </span>{' '}
-          and <span className="font-semibold">urban planning</span> to bridge the
-          gap between research and impactful real-world applications.
-        </p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <Hero />
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-blue-600 mb-4">
-          Research Interests & Expertise
-        </h2>
-        <div className="border-t-4 border-yellow-400 w-48 mb-4"></div>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Interest 1</li>
-          <li>Interest 2</li>
-          <li>Interest 3</li>
-          <li>Interest 4</li>
-        </ul>
-      </section>
+      <main className="py-12 space-y-12">
+        <AboutSection />
+        <ResearchInterests />
+        <Achievements />
+        <RecentPublications />
+        <ContactSection />
+      </main>
+    </div>
+  )
+}
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-blue-600 mb-4">
-          Recognitions & Achievements
-        </h2>
-        <div className="border-t-4 border-yellow-400 w-48 mb-4"></div>
-        <div className="border-l-4 border-blue-600 pl-4">
-          <p>I am honored to have received several awards, I......</p>
+function AboutSection() {
+  return (
+    <section className="px-4">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 className="text-3xl font-bold mb-4">Hello! I'm <span className="text-blue-600">Yunhee Lee</span></h1>
+            <p className="text-lg text-muted-foreground mb-6">
+              A Ph.D. Assistant Research Professor in Department of ... at the ... University. From optimizing data analytics, 
+              machine learning, and urban planning to bridge the gap between research and impactful real-world applications.
+            </p>
+            <Button asChild variant="outline" className="text-blue-600">
+              <Link href="/about">
+                Read More <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="relative h-[400px]">
+            <Image
+              src={aboutImg}
+              alt="Professor Yunhee Lee"
+              fill
+              className="rounded shadow"
+              priority
+            />
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
+  )
+}
 
-      <section>
-        <h2 className="text-2xl font-bold text-blue-600 mb-4">
-          Connect with Me
-        </h2>
-        <div className="border-t-4 border-yellow-400 w-48 mb-4"></div>
-        <p>
-          Let&apos;s build the cities of tomorrow! Reach out via my{' '}
-          <Link href="/contact" className="text-blue-600 hover:underline">
-            contact page
-          </Link>{' '}
-          or connect on{' '}
-          <Link href="#" className="text-blue-600 hover:underline">
-            LinkedIn
-          </Link>
-          .
-        </p>
-      </section>
+function ResearchInterests() {
+  const interests = [
+    { title: "Urban Planning", description: "Exploring sustainable city development and smart urban solutions.", icon: <Lightbulb className="h-8 w-8 text-yellow-500" /> },
+    { title: "Environmental Sustainability", description: "Researching eco-friendly practices and green technologies for urban areas.", icon: <Lightbulb className="h-8 w-8 text-green-500" /> },
+    { title: "Smart Cities", description: "Investigating the integration of technology in urban infrastructure and services.", icon: <Lightbulb className="h-8 w-8 text-blue-500" /> },
+  ]
+
+  return (
+    <section className="px-4">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeader title="Research Interests & Expertise" />
+        <div className="grid md:grid-cols-3 gap-6 mt-8">
+          {interests.map((interest, index) => (
+            <motion.div key={index} whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
+              <Card className="h-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    {interest.icon}
+                    <span>{interest.title}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{interest.description}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function Achievements() {
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  return (
+    <section className="bg-blue-50 py-12 px-4">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeader title="Recognitions & Achievements" />
+        <Card className="mt-8 bg-white shadow-lg">
+          <CardContent className="pt-6">
+            <div className="flex items-start space-x-4">
+              <Award className="h-10 w-10 text-yellow-500 flex-shrink-0 mt-1" />
+              <div>
+                <p className="text-muted-foreground mb-4">
+                  I am honored to have received several awards for my contributions to urban planning and sustainability research, including:
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <motion.li animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ delay: 0.2 }}>
+                    Urban Innovation Award 2023
+                  </motion.li>
+                  <motion.li animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ delay: 0.4 }}>
+                    Sustainability Research Excellence Prize
+                  </motion.li>
+                  {isExpanded && (
+                    <>
+                      <motion.li animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ delay: 0.6 }}>
+                        Smart City Development Grant
+                      </motion.li>
+                      <motion.li animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ delay: 0.8 }}>
+                        Environmental Policy Impact Award
+                      </motion.li>
+                    </>
+                  )}
+                </ul>
+                <Button 
+                  variant="link" 
+                  onClick={() => setIsExpanded(!isExpanded)} 
+                  className="mt-4 p-0 h-auto font-semibold text-blue-600"
+                >
+                  {isExpanded ? 'Show less' : 'Show more'}
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  )
+}
+
+function RecentPublications() {
+  const publications = [
+    { title: "The Future of Sustainable Urban Mobility", journal: "Journal of Urban Planning", year: 2023 },
+    { title: "Smart Grid Integration in Developing Cities", journal: "Sustainable Energy Review", year: 2022 },
+    { title: "Green Spaces and Mental Health in Urban Areas", journal: "Environmental Psychology Today", year: 2021 },
+  ]
+
+  return (
+    <section className="px-4">
+      <div className="max-w-5xl mx-auto">
+        <div className="flex justify-between items-center mb-8">
+          <SectionHeader title="Recent Publications" />
+          <Button asChild variant="outline">
+            <Link href="/publications" className="text-blue-600 hover:text-blue-700 inline-flex items-center">
+              View all <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+        <div className="space-y-4">
+          {publications.map((pub, index) => (
+            <motion.div key={index} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 400 }}>
+              <Card className="bg-white shadow hover:shadow-md transition-shadow duration-300">
+                <CardHeader>
+                  <CardTitle className="text-lg text-blue-600">{pub.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">{pub.journal}</span>
+                    <Badge variant="secondary" className="bg-blue-100 text-blue-600">{pub.year}</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ContactSection() {
+  return (
+    <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-12 px-4">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeader title="Connect with Me" />
+        <Card className="mt-8 bg-white/50 backdrop-blur-sm shadow-lg">
+          <CardContent className="pt-6">
+            <p className="text-lg text-slate-500 mb-6">
+              Let&apos;s collaborate on building sustainable, smart cities for tomorrow! Reach out via my <Link href="/contact" className="text-blue-600">contact page</Link> or connect on <Link href="" className="text-blue-600" target="_blank" rel="noopener noreferrer"><LinkedInIcon className="inline h-5 w-5 mr-1" />LinkedIn</Link>
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  )
+}
+
+export function SectionHeader({ title }: { title: string }) {
+  return (
+    <div className="mb-6">
+      <h2 className="text-3xl font-bold tracking-tight text-blue-600">
+        {title}
+      </h2>
+      <div className="h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 w-64 mt-2"></div>
     </div>
   )
 }
