@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BookOpen, Database, Mail } from 'lucide-react'
 import type { LucideIcon } from "lucide-react"
 
-type IconComponent = LucideIcon | React.FC<React.SVGProps<SVGSVGElement>>;
+type IconComponent = LucideIcon | ((props: React.SVGProps<SVGSVGElement>) => JSX.Element);
 
 type SocialLink = {
   name: string;
