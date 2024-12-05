@@ -7,8 +7,8 @@ A modern, responsive academic portfolio website built with Next.js 14, TypeScrip
 1. Clone the repository:
 
 ```bash
-git clone [https://github.com/Nathaniyell/yunhee-academic-portfolio.git]
-cd [yunhee-academic-portfolio]
+git clone https://github.com/Nathaniyell/yunhee-academic-portfolio.git
+cd yunhee-academic-portfolio
 ```
 
 2. Install dependencies:
