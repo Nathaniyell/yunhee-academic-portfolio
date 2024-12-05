@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Academic Portfolio Website
+
+A modern, responsive academic portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+
+```bash
+git clone [https://github.com/Nathaniyell/yunhee-academic-portfolio.git]
+cd [yunhee-academic-portfolio]
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Constants and Data
+All website content is centralized in `/src/lib/data.ts`. This includes:
 
-## Learn More
+- `navigation`: Main navigation menu items
+- `theme`: Global theme settings (colors, spacing, layout)
+- `animations`: Framer Motion animation presets
+- `resumeData`: Professional experience and qualifications
+- `publications`: Academic publications
+- `news`: Recent news and updates
+- `teachingData`: Course information and materials
+- `blogArticles`: Blog posts and articles
 
-To learn more about Next.js, take a look at the following resources:
+To customize the content, edit the corresponding objects in `data.ts`. For example:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```typescript
+// Update navigation items
+export const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  // Add or modify navigation items...
+]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+// Update theme settings
+export const theme = {
+  colors: {
+    primary: 'blue-600',
+    // Modify color schemes...
+  },
+  // Update other theme properties...
+}
+```
 
-## Deploy on Vercel
+### Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Responsive design
+- Dark/light mode support
+- Smooth page transitions
+- SEO optimized
+- Type-safe data management
+- Accessible UI components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Page Structure
+
+- `/`: Home page with hero section
+- `/about`: About page with research interests
+- `/resume`: Interactive resume with tabs
+- `/publications`: Academic publications
+- `/teaching`: Teaching portfolio
+- `/blog`: Blog articles
+- `/contact`: Contact information
+
+## Making Changes
+
+1. **Content Updates**: Modify the data objects in `/src/lib/data.ts`
+2. **Styling**: Update theme settings in the same file or modify Tailwind classes
+3. **Layout**: Edit page components in `/src/app/[page]/page.tsx`
+4. **Components**: Modify or create new components in `/src/components`
+
+## Built With
+
+- [Next.js 14](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Shadcn UI](https://ui.shadcn.com/)
+
+## Deployment
+
+The site can be deployed on [Vercel](https://vercel.com) with zero configuration:
+
+1. Push your code to GitHub
+2. Import your repository to Vercel
+3. Deploy
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

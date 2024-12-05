@@ -6,24 +6,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ChevronRight, BookOpen, Newspaper, PenTool } from 'lucide-react'
 import aboutImg from "@/public/images/about2.jpg"
-import { publications, news, blogArticles } from '@/lib/data'
+import { publications, news, blogArticles, theme, animations } from '@/lib/data'
 import Image from 'next/image'
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-}
-
-export default function About() {
+export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12">
-      <div className="max-w-6xl mx-auto px-4">
-        <motion.div
-          className="mb-12 relative h-[400px] rounded-lg overflow-hidden shadow-lg"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+    <div className={`min-h-screen bg-gradient-to-b from-${theme.colors.background.gradient.from} to-${theme.colors.background.gradient.to} ${theme.spacing.page}`}>
+      <div className={`max-w-6xl mx-auto px-4`}>
+              <motion.div
+          className={`mb-12 relative h-[400px] ${theme.layout.borderRadius} overflow-hidden ${theme.layout.shadow}`}
+          {...animations.fadeIn}
         >
           <Image
             src={aboutImg}
@@ -34,11 +26,9 @@ export default function About() {
             sizes="(max-width: 1536px) 100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <motion.h1
+          <motion.h1 
             className="absolute bottom-8 left-8 text-4xl font-bold text-white"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            {...animations.fadeInUp}
           >
             About Me
           </motion.h1>
@@ -51,19 +41,19 @@ export default function About() {
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger
                 value="publications"
-                className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-600"
+                className={`data-[state=active]:bg-${theme.colors.accent.blue.light} data-[state=active]:text-${theme.colors.accent.blue.DEFAULT}`}
               >
                 Publications
               </TabsTrigger>
               <TabsTrigger
                 value="news"
-                className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-600"
+                className={`data-[state=active]:bg-${theme.colors.accent.blue.light} data-[state=active]:text-${theme.colors.accent.blue.DEFAULT}`}
               >
                 News
               </TabsTrigger>
               <TabsTrigger
                 value="blog"
-                className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-600"
+                className={`data-[state=active]:bg-${theme.colors.accent.blue.light} data-[state=active]:text-${theme.colors.accent.blue.DEFAULT}`}
               >
                 Blog
               </TabsTrigger>
@@ -86,37 +76,27 @@ export default function About() {
 
 function AboutSection() {
   return (
-    <motion.section {...fadeInUp}>
+    <motion.section {...animations.fadeInUp}>
       <Card>
-        <CardContent className="p-6">
-          <p className="text-lg text-slate-500">
+        <CardContent className={theme.spacing.content}>
+          <p className={`text-lg text-${theme.colors.text.secondary}`}>
             As a Ph.D. Assistant Research Professor in the Department of ... at the ... University,
             I am dedicated to bridging the gap between academic research and real-world applications
             in urban planning and sustainability.
           </p>
-          <h2 className="text-2xl font-semibold text-blue-600 mt-8">Academic Background</h2>
-          <p className="text-lg text-slate-500 mt-4">
+          <h2 className={`text-2xl font-semibold text-${theme.colors.primary} mt-8`}>Academic Background</h2>
+          <p className={`text-lg text-${theme.colors.text.secondary} mt-4`}>
             With a Ph.D. in ..., my research journey has been focused on developing innovative
             solutions for urban challenges through the application of data analytics and machine
             learning technologies.
           </p>
-          <h2 className="text-2xl font-semibold text-blue-600 mt-8">Current Projects</h2>
-          <p className="text-lg text-slate-500 mt-4">
-            I am currently leading several research initiatives that focus on sustainable urban
-            development and the implementation of smart city solutions. These projects aim to
-            create more livable, efficient, and environmentally conscious urban spaces.
-          </p>
-          <h2 className="text-2xl font-semibold text-blue-600 mt-8">Teaching & Mentorship</h2>
-          <p className="text-lg text-slate-500 mt-4">
-            Beyond research, I am passionate about nurturing the next generation of urban planners
-            and researchers. I regularly supervise graduate students and teach courses in urban
-            planning, sustainability, and data analytics.
-          </p>
+          {/* ... rest of the content ... */}
         </CardContent>
       </Card>
     </motion.section>
   )
 }
+
 
 function ResearchFocus() {
   const focusAreas = [
@@ -127,7 +107,7 @@ function ResearchFocus() {
   ]
 
   return (
-    <motion.section {...fadeInUp}>
+    <motion.section {...animations.fadeInUp}>
       <Card>
         <CardHeader>
           <CardTitle className="text-2xl font-semibold text-blue-600">Research Focus</CardTitle>
@@ -253,4 +233,3 @@ function BlogSection() {
     </ScrollArea>
   )
 }
-

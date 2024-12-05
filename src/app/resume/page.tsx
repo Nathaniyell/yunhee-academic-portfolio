@@ -87,7 +87,7 @@ export default function Resume() {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <Button asChild>
-            <a className="text-blue-600" href="/path-to-your-cv.pdf" download>
+            <a className="text-blue-600" href="" download>
               <Download className="mr-2 h-4 w-4" /> Download Full CV
             </a>
           </Button>

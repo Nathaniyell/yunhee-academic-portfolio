@@ -3,17 +3,7 @@ import { UserRound } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Publications', href: '/publications' },
-  { name: 'Teaching', href: '/teaching' },
-  { name: 'Resume', href: '/resume' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
-]
+import { navigation } from '@/lib/data'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)

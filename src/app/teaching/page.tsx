@@ -31,7 +31,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <p className="mt-4 text-gray-600">{course.tldr}</p>
+              <p className="mt-4 text-gray-600">{course.description}</p>
 
               {course.materials && course.materials.length > 0 && (
                 <div className="mt-6">
