@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ChevronRight, BookOpen, Newspaper, PenTool, ArrowRight } from 'lucide-react'
 import aboutImg from "@/public/images/about2.jpg"
-import { publications, news, blogArticles, theme, animations, LinkToBlog } from '@/lib/data'
+import { publications, news, blogArticles, theme, animations, LinkToBlog, LinkToNews } from '@/lib/data'
 import Image from 'next/image'
 
 export default function AboutPage() {
@@ -188,6 +188,23 @@ function NewsSection() {
             </Card>
           </motion.div>
         ))}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="flex justify-center"
+        >
+          <Button 
+            asChild 
+            variant="link" 
+            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+          >
+            <a href={LinkToNews} className="flex items-center gap-2">
+             More news
+              <ArrowRight className="h-5 w-5 bounce-x" />
+            </a>
+          </Button>
+        </motion.div>
       </div>
     </ScrollArea>
   )
@@ -223,12 +240,12 @@ function BlogSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="flex justify-center pt-4"
+          className="flex justify-center"
         >
           <Button 
             asChild 
             variant="link" 
-            className="mt-2 text-lg text-white border-blue-600 bg-blue-600 group relative"
+            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
           >
             <a href={LinkToBlog} className="flex items-center gap-2">
               Visit blog 

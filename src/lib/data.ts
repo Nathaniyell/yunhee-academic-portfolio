@@ -341,5 +341,6 @@ export const LinkToTeaching = ""
 export const LinkToPublications = ""
 export const LinkToProjects = ""
 export const LinkToContact = ""
+export const LinkToNews = ""
 
 
