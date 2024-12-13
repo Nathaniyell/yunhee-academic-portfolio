@@ -70,7 +70,7 @@ export default function Resume() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-12">
       <div className="max-w-4xl mx-auto px-4">
-      <div className={`flex items-center justify-between ${theme.spacing.section}`}>
+      <div className={`flex flex-col gap-4 md:flex-row md:items-center justify-between  ${theme.spacing.section}`}>
         <motion.h1 
           className={`text-4xl font-bold text-${theme.colors.primary}`}
           {...animations.headerAnimation}
