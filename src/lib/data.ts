@@ -334,7 +334,7 @@ export const blogArticles = [
 ]
 
 //Please include the links to the different websites here
-//Example: blogLink = "https://www.example.com"
+//Example: const blogLink = "https://www.example.com"
 export const LinkToBlog = ""
 export const LinkToCV = ""
 export const LinkToTeaching = ""
@@ -344,5 +344,8 @@ export const LinkToContact = ""
 export const LinkToNews = ""
 export const AboutData = " As a Ph.D. Assistant Research Professor in the Department of ... at the ... University, I am dedicated to bridging the gap between academic research and real-world applications in urban planning and sustainability."
 export const AcademicBackground = "With a Ph.D. in ..., my research journey has been focused on developing innovative solutions for urban challenges through the application of data analytics and machine learning technologies."
+
+//Include the image in the /public/images folder and name it as YunheeAboutImage.jpg. Then add it here as a string. Alternatively, if you have the image stored on the web, you can include the https:// link to the image between the string
+export const YunheeAboutImage = ""
 
 

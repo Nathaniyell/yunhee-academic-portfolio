@@ -5,12 +5,13 @@ import { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Award, Lightbulb } from 'lucide-react'
+import { ArrowRight, Award, Download, Lightbulb } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
 import aboutImg from "@/public/images/about2.jpg"
 import SectionHeader from '@/components/SectionHeader'
+import { AboutData, LinkToCV, YunheeAboutImage } from '@/lib/data'
 
 export default function Home() {
   return (
@@ -36,18 +37,24 @@ function AboutSection() {
           <div>
             <h1 className="text-3xl font-bold mb-4">Hello! I&apos;m <span className="text-blue-600">Yunhee Lee</span></h1>
             <p className="text-lg text-slate-500 mb-6">
-              A Ph.D. Assistant Research Professor in Department of ... at the ... University. From optimizing data analytics,
-              machine learning, and urban planning to bridge the gap between research and impactful real-world applications.
+            {AboutData}
             </p>
-            <Button asChild variant="outline" className="text-blue-600">
+            <div className='flex gap-6 items-center'>
+            <Button asChild variant="outline" className="text-blue-600 border-blue-600 border">
               <Link href="/about">
-                Read More <ArrowRight className="ml-2 h-4 w-4" />
+                Read More <ArrowRight className="ml-1 h-4 w-4 bounce-x" />
               </Link>
             </Button>
+            <Button asChild variant="outline" className="text-white border-blue-600 bg-blue-600">
+              <Link href={LinkToCV}>
+                Download resume  <Download className="ml-1 h-4 w-4 bounce-y" />
+              </Link>
+            </Button>
+            </div>
           </div>
           <div className="relative h-[400px]">
             <Image
-              src={aboutImg}
+              src={aboutImg || YunheeAboutImage}
               alt="Professor Yunhee Lee"
               fill
               className="rounded shadow"
