@@ -1,7 +1,10 @@
-import { BookOpen, Database, Mail } from "lucide-react"
+'use client'
+import { motion } from 'framer-motion'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { BookOpen, Database, Mail } from 'lucide-react'
 import type { LucideIcon } from "lucide-react"
 
-type IconComponent = LucideIcon | React.FC<React.SVGProps<SVGSVGElement>>;
+type IconComponent = LucideIcon | ((props: React.SVGProps<SVGSVGElement>) => JSX.Element);
 
 type SocialLink = {
   name: string;
@@ -81,26 +84,54 @@ const socialLinks: SocialLink[] = [
 
 export default function Contact() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold text-blue-600 mb-8">Connect With Me</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {socialLinks.map((link) => {
-          const Icon = link.icon;
-          return (
-            <a 
-              key={link.name}
-              href={link.href}
-              className="flex items-center p-4 rounded-lg hover:bg-blue-50 transition-colors group"
-            >
-              <Icon className="h-8 w-8 text-blue-600 mr-4 group-hover:scale-110 transition-transform" />
-              <div>
-                <h2 className="font-semibold text-lg">{link.name}</h2>
-                <p className="text-gray-600">{link.description}</p>
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <motion.h1 
+          className="text-4xl font-bold text-blue-600 mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Connect With Me
+        </motion.h1>
+        
+        <motion.div 
+          className="space-y-6"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <Card>
+            <CardHeader>
+              <CardTitle>Social Links</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {socialLinks.map((link, index) => {
+                  const Icon = link.icon;
+                  return (
+                    <motion.a 
+                      key={link.name}
+                      href={link.href}
+                      className="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                    >
+                      <Icon className="h-8 w-8 text-blue-600 mr-3 group-hover:scale-110 transition-transform" />
+                      <div>
+                        <h2 className="font-semibold text-sm">{link.name}</h2>
+                        <p className="text-xs text-gray-600">{link.description}</p>
+                      </div>
+                    </motion.a>
+                  );
+                })}
               </div>
-            </a>
-          );
-        })}
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
     </div>
   )
