@@ -8,8 +8,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { ChevronRight, Search } from 'lucide-react'
-import { blogArticles } from '@/lib/data'
+import { ChevronRight, Search, ArrowRight } from 'lucide-react'
+import { animations, blogArticles, LinkToBlog, theme } from '@/lib/data'
 
 
 
@@ -22,17 +22,33 @@ export default function BlogPage() {
   )
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12">
-      <div className="max-w-4xl mx-auto px-4">
-        <motion.h1
-          className="text-4xl font-bold text-blue-600 mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+    <div className={`min-h-screen bg-gradient-to-b from-${theme.colors.background.gradient.from} to-${theme.colors.background.gradient.to} ${theme.spacing.page}`}>
+    <div className={`max-w-${theme.layout.maxWidth} mx-auto px-4`}>
+    <div className={`flex items-center justify-between ${theme.spacing.section}`}>
+      <motion.h1 
+        className={`text-4xl font-bold text-${theme.colors.primary}`}
+        {...animations.headerAnimation}
+      >
+        Blog Articles
+      </motion.h1>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className=""
+      >
+        <Button 
+          asChild 
+          variant="link" 
+            className="text-lg text-blue-900 border-2 border-blue-600 bg-white group relative"
         >
-          Blog Articles
-        </motion.h1>
-
+          <a href={LinkToBlog} className="flex items-center gap-2">
+            Visit blog
+            <ArrowRight className="h-5 w-5 bounce-x" />
+          </a>
+        </Button>
+      </motion.div>
+      </div>
         <motion.div
           className="mb-8"
           initial={{ opacity: 0 }}

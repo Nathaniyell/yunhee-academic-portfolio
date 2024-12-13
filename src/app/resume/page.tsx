@@ -1,15 +1,14 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Download, BookOpen, GraduationCap, Code, Languages, FileText } from 'lucide-react'
-import { resumeData } from '@/lib/data'
+import { Download, BookOpen, GraduationCap, Code, Languages, FileText, ArrowRight } from 'lucide-react'
+import { animations, LinkToCV, resumeData, theme } from '@/lib/data'
 
 // Add type definitions for the props
 interface ResumeData {
@@ -71,27 +70,31 @@ export default function Resume() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-12">
       <div className="max-w-4xl mx-auto px-4">
+      <div className={`flex items-center justify-between ${theme.spacing.section}`}>
         <motion.h1 
-          className="text-4xl font-bold text-blue-600 mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          className={`text-4xl font-bold text-${theme.colors.primary}`}
+          {...animations.headerAnimation}
         >
-          {resumeData.title}
+          Research Projects
         </motion.h1>
-
-        <motion.div 
-          className="mb-8"
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.5 }}
+          className=""
         >
-          <Button asChild>
-            <a className="text-blue-600" href="" download>
-              <Download className="mr-2 h-4 w-4" /> Download Full CV
+          <Button 
+            asChild 
+            variant="link" 
+              className="text-lg text-blue-900 border-2 border-blue-600 bg-white group relative"
+          >
+            <a href={LinkToCV} className="flex items-center gap-2">
+              Download Resume
+              <Download className="h-5 w-5 bounce-y" />
             </a>
           </Button>
         </motion.div>
+        </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <div className="px-1">
@@ -173,9 +176,25 @@ function OverviewTab({ data }: TabProps) {
               </CardContent>
             </Card>
           ))}
-          <Button asChild variant="link" className="mt-2 text-blue-600">
-            <Link href="/projects">View All Projects</Link>
+       
+          <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-2"
+        >
+          <Button 
+            asChild 
+            variant="link" 
+            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+          >
+            <a href="/projects" className="flex items-center gap-2">
+           View all projects
+              <ArrowRight className="h-5 w-5 bounce-x" />
+            </a>
           </Button>
+        </motion.div>
+       
         </Section>
 
         <Section title="Teaching" icon={<GraduationCap className="h-5 w-5" />}>
@@ -185,9 +204,26 @@ function OverviewTab({ data }: TabProps) {
               <span className="text-sm text-slate-500 ml-2">({course.level})</span>
             </div>
           ))}
-          <Button asChild variant="link" className="mt-2 text-blue-600">
-            <Link href="/teaching">View Teaching Details</Link>
+       
+    
+          <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-2"
+        >
+          <Button 
+            asChild 
+            variant="link" 
+            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+          >
+            <a href="/teaching" className="flex items-center gap-2">
+           View teaching details
+              <ArrowRight className="h-5 w-5 bounce-x" />
+            </a>
           </Button>
+        </motion.div>
+     
         </Section>
 
         <Section title="Languages" icon={<Languages className="h-5 w-5" />}>
@@ -205,9 +241,25 @@ function OverviewTab({ data }: TabProps) {
               <span className="text-sm text-slate-500 block">{pub.journal}, {pub.year}</span>
             </div>
           ))}
-          <Button asChild variant="link" className="mt-2 text-blue-600">
-            <Link href="/publications">View All Publications</Link>
+     
+          <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-2"
+        >
+          <Button 
+            asChild 
+            variant="link" 
+            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+          >
+            <a href="/publications" className="flex items-center gap-2">
+           View all publications
+              <ArrowRight className="h-5 w-5 bounce-x" />
+            </a>
           </Button>
+        </motion.div>
+        
         </Section>
       </div>
     </ScrollArea>

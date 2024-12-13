@@ -42,7 +42,18 @@
     transform: translateX(4px);
   }
 }
+@keyframes bounce-y {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
 
 .bounce-x {
   animation: bounce-x 1s ease-in-out infinite;
+}
+.bounce-y {
+  animation: bounce-y 1s ease-in-out infinite;
 }
