@@ -335,12 +335,14 @@ export const blogArticles = [
 
 //Please include the links to the different websites here
 //Example: blogLink = "https://www.example.com"
-export const LinkToBlog = "" 
+export const LinkToBlog = ""
 export const LinkToCV = ""
 export const LinkToTeaching = ""
 export const LinkToPublications = ""
 export const LinkToProjects = ""
 export const LinkToContact = ""
 export const LinkToNews = ""
+export const AboutData = " As a Ph.D. Assistant Research Professor in the Department of ... at the ... University, I am dedicated to bridging the gap between academic research and real-world applications in urban planning and sustainability."
+export const AcademicBackground = "With a Ph.D. in ..., my research journey has been focused on developing innovative solutions for urban challenges through the application of data analytics and machine learning technologies."
 
 

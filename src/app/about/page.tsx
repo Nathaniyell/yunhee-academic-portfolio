@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ChevronRight, BookOpen, Newspaper, PenTool, ArrowRight } from 'lucide-react'
 import aboutImg from "@/public/images/about2.jpg"
-import { publications, news, blogArticles, theme, animations, LinkToBlog, LinkToNews } from '@/lib/data'
+import { publications, news, blogArticles, theme, animations, LinkToBlog, LinkToNews, LinkToPublications, AboutData, AcademicBackground, LinkToCV, } from '@/lib/data'
 import Image from 'next/image'
 
 export default function AboutPage() {
@@ -80,17 +80,29 @@ function AboutSection() {
       <Card>
         <CardContent className={theme.spacing.content}>
           <p className={`text-lg text-${theme.colors.text.secondary}`}>
-            As a Ph.D. Assistant Research Professor in the Department of ... at the ... University,
-            I am dedicated to bridging the gap between academic research and real-world applications
-            in urban planning and sustainability.
+            {AboutData}
           </p>
           <h2 className={`text-2xl font-semibold text-${theme.colors.primary} mt-8`}>Academic Background</h2>
           <p className={`text-lg text-${theme.colors.text.secondary} mt-4`}>
-            With a Ph.D. in ..., my research journey has been focused on developing innovative
-            solutions for urban challenges through the application of data analytics and machine
-            learning technologies.
+       {AcademicBackground}
           </p>
-          {/* ... rest of the content ... */}
+          <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="flex mt-4"
+        >
+          <Button 
+            asChild 
+            variant="link" 
+            className="text-lg text-blue-900 border-2 border-blue-600 bg-white group relative"
+          >
+            <a href={LinkToCV} className="flex items-center gap-2">
+              Download CV
+              <ArrowRight className="h-5 w-5 bounce-x" />
+            </a>
+          </Button>
+        </motion.div>
         </CardContent>
       </Card>
     </motion.section>
@@ -158,6 +170,23 @@ function PublicationsSection() {
             </Card>
           </motion.div>
         ))}
+          <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="flex justify-center"
+        >
+          <Button 
+            asChild 
+            variant="link" 
+            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+          >
+            <a href={LinkToPublications} className="flex items-center gap-2">
+             More publications
+              <ArrowRight className="h-5 w-5 bounce-x" />
+            </a>
+          </Button>
+        </motion.div>
       </div>
     </ScrollArea>
   )
