@@ -4,9 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { ChevronRight, BookOpen, Newspaper, PenTool } from 'lucide-react'
+import { ChevronRight, BookOpen, Newspaper, PenTool, ArrowRight } from 'lucide-react'
 import aboutImg from "@/public/images/about2.jpg"
-import { publications, news, blogArticles, theme, animations } from '@/lib/data'
+import { publications, news, blogArticles, theme, animations, LinkToBlog } from '@/lib/data'
 import Image from 'next/image'
 
 export default function AboutPage() {
@@ -212,7 +212,7 @@ function BlogSection() {
                 </h3>
                 <p className="text-slate-500 mt-2">{article.tldr}</p>
                 <Button asChild variant="link" className="mt-2 p-0">
-                  <a href={article.link}>Read Article</a>
+                  <a href={article.link}>Read</a>
                 </Button>
               </CardContent>
             </Card>
@@ -225,8 +225,15 @@ function BlogSection() {
           transition={{ delay: 0.5 }}
           className="flex justify-center pt-4"
         >
-          <Button asChild variant="link" className="mt-2 text-blue-600">
-            <a href="/blog">View More Articles</a>
+          <Button 
+            asChild 
+            variant="link" 
+            className="mt-2 text-lg text-white border-blue-600 bg-blue-600 group relative"
+          >
+            <a href={LinkToBlog} className="flex items-center gap-2">
+              Visit blog 
+              <ArrowRight className="h-5 w-5 bounce-x" />
+            </a>
           </Button>
         </motion.div>
       </div>

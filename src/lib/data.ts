@@ -309,6 +309,7 @@ export const teachingData = [
 ]
 
 export const blogArticles = [
+  //link here means the link to that particular blog post/article
   {
     id: 1,
     title: "The Future of Smart Cities: Integrating IoT and AI",
@@ -331,3 +332,14 @@ export const blogArticles = [
     link: "/blog/green-building-technologies"
   }
 ]
+
+//Please include the links to the different websites here
+//Example: blogLink = "https://www.example.com"
+export const LinkToBlog = "" 
+export const LinkToCV = ""
+export const LinkToTeaching = ""
+export const LinkToPublications = ""
+export const LinkToProjects = ""
+export const LinkToContact = ""
+
+
