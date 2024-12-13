@@ -6,8 +6,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Search } from 'lucide-react'
-import { publications, theme, animations } from '@/lib/data'
+import { ArrowRight, Search } from 'lucide-react'
+import { publications, theme, animations, LinkToPublications } from '@/lib/data'
 
 export default function PublicationsPage() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -20,12 +20,31 @@ export default function PublicationsPage() {
   return (
     <div className={`min-h-screen bg-gradient-to-b from-${theme.colors.background.gradient.from} to-${theme.colors.background.gradient.to} ${theme.spacing.page}`}>
       <div className={`max-w-${theme.layout.maxWidth} mx-auto px-4`}>
-        <motion.h1
-          className={`text-4xl font-bold text-${theme.colors.primary} ${theme.spacing.section}`}
+      <div className={`flex items-center justify-between ${theme.spacing.section}`}>
+        <motion.h1 
+          className={`text-4xl font-bold text-${theme.colors.primary}`}
           {...animations.headerAnimation}
         >
           Publications
         </motion.h1>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className=""
+        >
+          <Button 
+            asChild 
+            variant="link" 
+              className="text-lg text-blue-900 border-2 border-blue-600 bg-white group relative"
+          >
+            <a href={LinkToPublications} className="flex items-center gap-2">
+              View all publications 
+              <ArrowRight className="h-5 w-5 bounce-x" />
+            </a>
+          </Button>
+        </motion.div>
+        </div>
 
         <motion.div
           className={theme.spacing.section}

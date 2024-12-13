@@ -1,20 +1,39 @@
 'use client'
 
-import { teachingData } from "@/lib/data";
+import { Button } from "@/components/ui/button";
+import { LinkToTeaching, teachingData, theme, animations } from "@/lib/data";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <motion.h1
-          className="text-4xl font-bold text-blue-600 mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+    <div className={`min-h-screen bg-gradient-to-b from-${theme.colors.background.gradient.from} to-${theme.colors.background.gradient.to} ${theme.spacing.page}`}>
+      <div className={`max-w-${theme.layout.maxWidth} mx-auto px-4 relative`}>
+      <div className={`flex items-center justify-between ${theme.spacing.section}`}>
+        <motion.h1 
+          className={`text-4xl font-bold text-${theme.colors.primary}`}
+          {...animations.headerAnimation}
         >
           Teaching Experience
         </motion.h1>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className=""
+        >
+          <Button 
+            asChild 
+            variant="link" 
+              className="text-lg text-blue-900 border-2 border-blue-600 bg-white group relative"
+          >
+            <a href={LinkToTeaching} className="flex items-center gap-2">
+              More about teaching experience 
+              <ArrowRight className="h-5 w-5 bounce-x" />
+            </a>
+          </Button>
+        </motion.div>
+        </div>
 
 
 
