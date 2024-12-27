@@ -133,11 +133,7 @@ export const resumeData = {
   ],
   teaching: [
     {
-      course: "Urban Planning 101",
-      level: "Undergraduate"
-    },
-    {
-      course: "Advanced City Planning",
+      course: "Advanced Research and Analysis Methods",
       level: "Graduate"
     }
   ],
