@@ -91,7 +91,7 @@ export const animations = {
 
 export const heroContent = {
   title: "Welcome to My Portfolio",
-  subtitle: "Your one-stop destination to explore my work, research, and contributions to ...",
+  subtitle: "Explore a curated collection of my research, projects, and professional contributions in transportation engineering, urban planning, sustainable mobility, and smart cities.",
   image: "https://i.imghippo.com/files/igJ8471bGk.jpeg",
   buttons: {
     primary: {
@@ -106,30 +106,30 @@ export const heroContent = {
 }
 
 export const resumeData = {
-  title: "Professional Resume",
+  title: "Professional Experience and Projects",
   projects: [
     {
-      name: "Urban Planning Analytics Platform",
-      description: "Developed a comprehensive analytics platform for urban planning using machine learning and big data technologies.",
-      year: 2023
+      name: "Advanced Detection and Control Systems for Virus Spread in Public Transportation",
+      description: "Contributing to a multi-phase research initiative focused on designing and implementing advanced detection and control technologies to mitigate the spread of the MERS virus among public transportation users.",
+      year: "2020-2021"
     },
     {
-      name: "Sustainable City Framework",
-      description: "Created a framework for evaluating and implementing sustainable practices in urban development.",
-      year: 2023
+      name: "Improving Mobility for Transportation-Disadvantaged Populations",
+      description: "Designated to play a pivotal role in developing innovative solutions to enhance mobility for transportation-disadvantaged groups.",
+      year: 2021
     },
     {
-      name: "Smart Transportation System",
-      description: "Designed and implemented an AI-driven transportation optimization system for smart cities.",
-      year: 2022
+      name: "AI-Driven Shared Vehicle Management System",
+      description: "Aiming to develop a robust management system for autonomous shared vehicles, leveraging artificial intelligence and deep learning techniques.",
+      year: 2021-2022
     }
   ],
   areasOfInterest: [
-    "Urban Analytics",
-    "Sustainable Development",
-    "Smart Cities",
-    "Transportation Planning",
-    "Environmental Impact Assessment"
+    "Sustainable Urban Mobility",
+    "Smart Cities and Urban Innovation",
+    "Transportation Planning and Optimization",
+    "Data Analytics and Data-Driven Decision-Making",
+    "Accessibility, Sustainability, Inclusion, and Equity in Urban Mobility Design and Development"
   ],
   teaching: [
     {
