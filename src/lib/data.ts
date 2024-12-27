@@ -346,6 +346,6 @@ export const AboutData = " As a Ph.D. Assistant Research Professor in the Depart
 export const AcademicBackground = "With a Ph.D. in ..., my research journey has been focused on developing innovative solutions for urban challenges through the application of data analytics and machine learning technologies."
 
 //Include the image in the /public/images folder and name it as YunheeAboutImage.jpg. Then add it here as a string. Alternatively, if you have the image stored on the web, you can include the https:// link to the image between the string
-export const YunheeAboutImage = ""
+export const YunheeAboutImage = "/public/images/yubhee-pp.jpg"
 
 
