@@ -137,7 +137,7 @@ export const resumeData = {
       level: "Graduate"
     }
   ],
-  languages: ["English", "Korean", "Japanese"],
+  languages: ["English", "French", "Arabic", "Korean"],
   publications: [
     {
       title: "Machine Learning in Urban Planning",
