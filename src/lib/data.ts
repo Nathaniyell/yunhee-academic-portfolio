@@ -170,16 +170,25 @@ export const resumeData = {
       
     },
     {
-      period: "2017-2019",
       title: "Research Fellow",
-      company: "Urban Sustainability Institute",
-      location: "Singapore",
-      description: "Conducted research on smart city initiatives in Southeast Asia",
+      company: "University Of Seoul",
+      location: "Seoul, Korea Republic Of",
+      period: "March 2019 - February 2024",
+      description: "Conducted advanced research on sustainable mobility solutions and smart city initiatives.",
       highlights: [
-        "Led a team of 5 researchers on smart city projects",
-        "Secured $500K in research grants",
-        "Published 4 peer-reviewed papers"
-      ]
+        "Leading research on virus spread mitigation in public transportation, contributing to national safety protocols",
+        "Publishing peer-reviewed articles and book chapters in journals such as Journal of Transport Geography"
+    ],
+      projects: [
+        "Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users",
+        "Development of a System for Enhancing Mobility Convenience for Transportation-Disadvantaged Populations: Deep Learning Algorithm Construction and Travel Pattern Modeling (Phase 2)",
+        "Development of an Autonomous Shared Vehicle Management System Using Artificial Intelligence and Deep Learning Techniques",
+        "Advanced Study on Enhancing Mobility Convenience for Transportation-Disadvantaged Populations: Deep Learning Algorithm Construction and Travel Pattern Modeling",
+        "Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Advanced Study)",
+        "Continuation of Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Phase 2-1)",
+        "Final Phase of Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Phase 2-2)"
+      ],
+      
     },
     {
       period: "2015-2017",
