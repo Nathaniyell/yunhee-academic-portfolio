@@ -155,12 +155,19 @@ export const resumeData = {
   experience: [
     {
       title: "Assistant Research Professor",
-      company: "University Name",
-      location: "City, Country",
-      period: "2020-Present",
-      description: "Leading research in urban planning and sustainability",
-      highlights: ["Led research team", "Published papers"],
-      projects: ["Smart City Initiative"]
+      company: "University Of Seoul",
+      location: "Seoul, Korea Republic Of",
+      period: "March 2024-Present",
+      description: "Conducting research focused on urban mobility, transportation systems optimization, and sustainable smart city development.",
+      highlights: [
+        "Managing multidisciplinary research teams integrating machine learning and GIS for smart urban mobility planning solutions",
+        "Authoring peer-reviewed publications on mobility hubs, equity in transportation, and public health integration",
+        "Guiding graduate students on thesis topics related to different urban analytics, sustainable planning, and city development" 
+      ],    
+    projects: [
+      "Urban Mobility Optimization Using AI and Deep Learning",
+      ],
+      
     },
     {
       period: "2017-2019",
