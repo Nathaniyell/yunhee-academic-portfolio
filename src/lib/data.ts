@@ -140,9 +140,16 @@ export const resumeData = {
   languages: ["English", "French", "Arabic", "Korean"],
   publications: [
     {
-      title: "Machine Learning in Urban Planning",
-      journal: "Urban Studies Journal",
-      year: "2023"
+      title: "Optimizing shared bike systems for economic gain: Integrating land use and retail",
+      journal: "Journal of Transport Geography",
+      year: "2024",
+      link: "https://www.sciencedirect.com/science/article/pii/S0966692324001297?via%3Dihub"
+    },
+    {
+      title: "Locating carbon neutral mobility hubs using artificial intelligence techniques",
+      journal: "Scientific Reports",
+      year: "2024",
+      link: "https://www.nature.com/articles/s41598-024-62701-z"
     }
   ],
   experience: [
