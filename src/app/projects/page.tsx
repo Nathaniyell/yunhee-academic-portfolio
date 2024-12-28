@@ -12,7 +12,7 @@ export default function ProjectPage() {
   return (
     <div className={`min-h-screen bg-gradient-to-b from-${theme.colors.background.gradient.from} to-${theme.colors.background.gradient.to} ${theme.spacing.page}`}>
       <div className={`max-w-${theme.layout.maxWidth} mx-auto px-4`}>
-        <div className={`flex items-center justify-between ${theme.spacing.section}`}>
+        <div className={`flex flex-col gap-4 md:flex-row md:items-center justify-between ${theme.spacing.section}`}>
         <motion.h1 
           className={`text-4xl font-bold text-${theme.colors.primary}`}
           {...animations.headerAnimation}

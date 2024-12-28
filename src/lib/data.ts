@@ -91,7 +91,7 @@ export const animations = {
 
 export const heroContent = {
   title: "Welcome to My Portfolio",
-  subtitle: "Your one-stop destination to explore my work, research, and contributions to ...",
+  subtitle: "Explore a curated collection of my research, projects, and professional contributions in transportation engineering, urban planning, sustainable mobility, and smart cities.",
   image: "https://i.imghippo.com/files/igJ8471bGk.jpeg",
   buttons: {
     primary: {
@@ -106,70 +106,89 @@ export const heroContent = {
 }
 
 export const resumeData = {
-  title: "Professional Resume",
+  title: "Professional Experience and Projects",
   projects: [
     {
-      name: "Urban Planning Analytics Platform",
-      description: "Developed a comprehensive analytics platform for urban planning using machine learning and big data technologies.",
-      year: 2023
+      name: "Advanced Detection and Control Systems for Virus Spread in Public Transportation",
+      description: "Contributing to a multi-phase research initiative focused on designing and implementing advanced detection and control technologies to mitigate the spread of the MERS virus among public transportation users.",
+      year: "2020-2021"
     },
     {
-      name: "Sustainable City Framework",
-      description: "Created a framework for evaluating and implementing sustainable practices in urban development.",
-      year: 2023
+      name: "Improving Mobility for Transportation-Disadvantaged Populations",
+      description: "Designated to play a pivotal role in developing innovative solutions to enhance mobility for transportation-disadvantaged groups.",
+      year: 2021
     },
     {
-      name: "Smart Transportation System",
-      description: "Designed and implemented an AI-driven transportation optimization system for smart cities.",
-      year: 2022
+      name: "AI-Driven Shared Vehicle Management System",
+      description: "Aiming to develop a robust management system for autonomous shared vehicles, leveraging artificial intelligence and deep learning techniques.",
+      year: 2021-2022
     }
   ],
   areasOfInterest: [
-    "Urban Analytics",
-    "Sustainable Development",
-    "Smart Cities",
-    "Transportation Planning",
-    "Environmental Impact Assessment"
+    "Sustainable Urban Mobility",
+    "Smart Cities and Urban Innovation",
+    "Transportation Planning and Optimization",
+    "Data Analytics and Data-Driven Decision-Making",
+    "Accessibility, Sustainability, Inclusion, and Equity in Urban Mobility Design and Development"
   ],
   teaching: [
     {
-      course: "Urban Planning 101",
-      level: "Undergraduate"
-    },
-    {
-      course: "Advanced City Planning",
+      course: "Advanced Research and Analysis Methods",
       level: "Graduate"
     }
   ],
-  languages: ["English", "Korean", "Japanese"],
+  languages: ["English", "French", "Arabic", "Korean"],
   publications: [
     {
-      title: "Machine Learning in Urban Planning",
-      journal: "Urban Studies Journal",
-      year: "2023"
+      title: "Optimizing shared bike systems for economic gain: Integrating land use and retail",
+      journal: "Journal of Transport Geography",
+      year: "2024",
+      link: "https://www.sciencedirect.com/science/article/pii/S0966692324001297?via%3Dihub"
+    },
+    {
+      title: "Locating carbon neutral mobility hubs using artificial intelligence techniques",
+      journal: "Scientific Reports",
+      year: "2024",
+      link: "https://www.nature.com/articles/s41598-024-62701-z"
     }
   ],
   experience: [
     {
       title: "Assistant Research Professor",
-      company: "University Name",
-      location: "City, Country",
-      period: "2020-Present",
-      description: "Leading research in urban planning and sustainability",
-      highlights: ["Led research team", "Published papers"],
-      projects: ["Smart City Initiative"]
+      company: "University Of Seoul",
+      location: "Seoul, Korea Republic Of",
+      period: "March 2024-Present",
+      description: "Conducting research focused on urban mobility, transportation systems optimization, and sustainable smart city development.",
+      highlights: [
+        "Managing multidisciplinary research teams integrating machine learning and GIS for smart urban mobility planning solutions",
+        "Authoring peer-reviewed publications on mobility hubs, equity in transportation, and public health integration",
+        "Guiding graduate students on thesis topics related to different urban analytics, sustainable planning, and city development" 
+      ],    
+    projects: [
+      "Urban Mobility Optimization Using AI and Deep Learning",
+      ],
+      
     },
     {
-      period: "2017-2019",
       title: "Research Fellow",
-      company: "Urban Sustainability Institute",
-      location: "Singapore",
-      description: "Conducted research on smart city initiatives in Southeast Asia",
+      company: "University Of Seoul",
+      location: "Seoul, Korea Republic Of",
+      period: "March 2019 - February 2024",
+      description: "Conducted advanced research on sustainable mobility solutions and smart city initiatives.",
       highlights: [
-        "Led a team of 5 researchers on smart city projects",
-        "Secured $500K in research grants",
-        "Published 4 peer-reviewed papers"
-      ]
+        "Leading research on virus spread mitigation in public transportation, contributing to national safety protocols",
+        "Publishing peer-reviewed articles and book chapters in journals such as Journal of Transport Geography"
+    ],
+      projects: [
+        "Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users",
+        "Development of a System for Enhancing Mobility Convenience for Transportation-Disadvantaged Populations: Deep Learning Algorithm Construction and Travel Pattern Modeling (Phase 2)",
+        "Development of an Autonomous Shared Vehicle Management System Using Artificial Intelligence and Deep Learning Techniques",
+        "Advanced Study on Enhancing Mobility Convenience for Transportation-Disadvantaged Populations: Deep Learning Algorithm Construction and Travel Pattern Modeling",
+        "Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Advanced Study)",
+        "Continuation of Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Phase 2-1)",
+        "Final Phase of Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Phase 2-2)"
+      ],
+      
     },
     {
       period: "2015-2017",
@@ -346,6 +365,6 @@ export const AboutData = " As a Ph.D. Assistant Research Professor in the Depart
 export const AcademicBackground = "With a Ph.D. in ..., my research journey has been focused on developing innovative solutions for urban challenges through the application of data analytics and machine learning technologies."
 
 //Include the image in the /public/images folder and name it as YunheeAboutImage.jpg. Then add it here as a string. Alternatively, if you have the image stored on the web, you can include the https:// link to the image between the string
-export const YunheeAboutImage = ""
+export const YunheeAboutImage = "/public/images/yubhee-pp.jpg"
 
 

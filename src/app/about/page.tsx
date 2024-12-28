@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { ChevronRight, BookOpen, Newspaper, PenTool, ArrowRight } from 'lucide-react'
+import { ChevronRight, BookOpen, Newspaper, PenTool, ArrowRight, Download } from 'lucide-react'
 import aboutImg from "@/public/images/about2.jpg"
 import { publications, news, blogArticles, theme, animations, LinkToBlog, LinkToNews, LinkToPublications, AboutData, AcademicBackground, LinkToCV, } from '@/lib/data'
 import Image from 'next/image'
@@ -99,7 +99,7 @@ function AboutSection() {
           >
             <a href={LinkToCV} className="flex items-center gap-2">
               Download CV
-              <ArrowRight className="h-5 w-5 bounce-x" />
+              <Download className="h-5 w-5 bounce-y" />
             </a>
           </Button>
         </motion.div>
