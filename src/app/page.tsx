@@ -11,7 +11,7 @@ import Hero from '@/components/Hero'
 import Image from 'next/image'
 // import aboutImg from "@/public/images/about2.jpg"
 import SectionHeader from '@/components/SectionHeader'
-import { AboutData, LinkToCV, YunheeAboutImage, resumeData } from '@/lib/data'
+import { AboutData, LinkToCV, YunheeAboutImage, resumeData, publications } from '@/lib/data'
 
 export default function Home() {
   return (
@@ -150,11 +150,7 @@ function Achievements() {
 }
 
 function RecentPublications() {
-  const publications = [
-    { title: "The Future of Sustainable Urban Mobility", journal: "Journal of Urban Planning", year: 2023 },
-    { title: "Smart Grid Integration in Developing Cities", journal: "Sustainable Energy Review", year: 2022 },
-    { title: "Green Spaces and Mental Health in Urban Areas", journal: "Environmental Psychology Today", year: 2021 },
-  ]
+  const recentPublications = publications.slice(0, 3)
 
   return (
     <section className="px-4">
@@ -168,7 +164,7 @@ function RecentPublications() {
           </Button>
         </div>
         <div className="space-y-4">
-          {publications.map((pub, index) => (
+          {recentPublications.map((pub, index) => (
             <motion.div key={index} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 400 }}>
               <Card className="bg-white shadow hover:shadow-md transition-shadow duration-300">
                 <CardHeader>
@@ -176,8 +172,18 @@ function RecentPublications() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-500">{pub.journal}</span>
+                    <div className="flex flex-col space-y-2">
+
+                      <div className="text-slate-500"><span className="font-bold">
+                        Journal: &nbsp;
+                      </span>{pub.journal}</div>
+                      <Link href={pub.link} target="_blank" rel="noopener noreferrer" className=" hover:text-blue-700 underline">
+                        Read more
+                      </Link>
+                    </div>
+
                     <Badge variant="secondary" className="bg-blue-100 text-blue-600">{pub.year}</Badge>
+
                   </div>
                 </CardContent>
               </Card>
