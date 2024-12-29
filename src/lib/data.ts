@@ -271,26 +271,47 @@ export const resumeData = {
 
 export const publications = [
   {
-    title: "Machine Learning Applications in Urban Planning",
-    description: "A comprehensive review of how machine learning is transforming urban planning practices.",
-    year: 2023,
-    journal: "Journal of Urban Technology",
-    link: "/publications/ml-urban-planning"
-  },
-  {
-    title: "Sustainable Urban Development Patterns",
-    description: "Analysis of sustainable development patterns in major metropolitan areas.",
-    year: 2023,
-    journal: "Sustainability Science",
-    link: "/publications/sustainable-development"
-  },
-  {
-    title: "Smart City Infrastructure Integration",
-    description: "Framework for integrating smart technologies into existing city infrastructure.",
-    year: 2022,
-    journal: "Smart Cities Review",
-    link: "/publications/smart-infrastructure"
-  }
+  title: "Optimizing shared bike systems for economic gain: Integrating land use and retail",
+  journal: "Journal of Transport Geography",
+  description: "The study focuses on optimizing shared-bike station locations in Seoul, emphasizing the role of cycling in promoting low-carbon mobility and economic revitalization. A unique approach was used, incorporating the retail activity index, land-use mix, transit proximity, and population and employment densities to determine optimal station locations",
+  year: "2024",
+  link: "https://www.sciencedirect.com/science/article/pii/S0966692324001297?via%3Dihub"
+},
+{
+  title: "Locating carbon neutral mobility hubs using artificial intelligence techniques",
+  journal: "Energy Sources, Part A: Recovery, Utilization, and Environmental Effects",
+  description: "The study explores the use of Genetic Algorithms (GA) and the Ensemble methods like Random Forest Regressor and XGBoost for optimizing mobility hub locations while reducing travel time and carbon emissions",
+  year: "2024",
+  link: "https://www.nature.com/articles/s41598-024-62701-z"
+},
+{
+  title: "The elasticity and efficiency of carbon reduction strategies in transportation",
+  journal: "Energy Sources, Part A: Recovery, Utilization, and Environmental Effects",
+  description: "The study focuses on evaluating the effectiveness of various transport carbon mitigation policies, addressing knowledge gaps and providing a comparative overview. A model using mixed-effects meta-regression and carbon elasticity was employed to assess policies like shared bikes, mobility hubs, low emission zones, congestion pricing, electric vehicles, and hydrogen vehicles",
+  year: "2024",
+  link: "https://www.tandfonline.com/doi/full/10.1080/15567036.2023.2276380"
+},
+{
+  title: "A Planning Support System for Boosting Bikeability in Seoul",
+  journal: "International Conference on Computers in Urban Planning and Urban Management",
+  description: "The research discusses the development of a Planning Support System (PSS) aimed at improving the shared-bike system in Seoul, Korea, by using a bikeability index. The study identifies key global and local variables affecting the system's efficacy and develops change scenarios to enhance performance",
+  year: "2023",
+  link: "https://link.springer.com/chapter/10.1007/978-3-031-31746-0_9"
+},
+ {
+  title: "Mining groups of factors influencing bus/minibus crash severities on poor pavement condition roads considering different lighting status",
+  journal: "Traffic Injury Prevention",
+  description: "The study uses data mining to identify crash-risk factors for bus/minibus crashes on poor roads under different lighting conditions: daylight, night with streetlights, and night without streetlight.",
+  year: "2022",
+  link: "https://www.tandfonline.com/doi/full/10.1080/15389588.2022.2066658"
+},
+ {
+  title: "Urban form and public transport design",
+  journal: "Urban Form and Accessibility",
+  description: "The study explores the relationship between urban form and public transport design, highlighting how city characteristics influence transport systems. And it discusses guidelines from authorities and researchers aimed at improving public transport services and promoting urban sustainability by enhancing access, walking, and biking ",
+  year: "2021",
+  link: "https://www.sciencedirect.com/science/article/abs/pii/B9780128198223000183?via%3Dihub"
+}
 ]
 export const news = [
   {
