@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ChevronRight, BookOpen, PenTool, ArrowRight, Download } from 'lucide-react'
-import { publications, blogArticles, theme, animations, LinkToPublications, AboutData, AcademicBackground, LinkToCV, YunheeAboutImage, resumeData } from '@/lib/data'
+import { publications, blogArticles, theme, animations, LinkToPublications, AboutData, AcademicBackground, LinkToCV, resumeData, heroContent } from '@/lib/data'
 import Image from 'next/image'
 
 export default function AboutPage() {
@@ -13,24 +13,81 @@ export default function AboutPage() {
     <div className={`min-h-screen bg-gradient-to-b from-${theme.colors.background.gradient.from} to-${theme.colors.background.gradient.to} ${theme.spacing.page}`}>
       <div className={`max-w-6xl mx-auto px-4`}>
         <motion.div
-          className={`mb-12 relative h-[400px] ${theme.layout.borderRadius} overflow-hidden ${theme.layout.shadow}`}
+          className="mb-12 relative"
           {...animations.fadeIn}
         >
-          <Image
-            src={YunheeAboutImage}
-            alt="Professor Yunhee Lee"
-            className="object-cover"
-            fill
-            priority
-            sizes="(max-width: 1536px) 100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <motion.h1
-            className="absolute bottom-8 left-8 text-4xl font-bold text-white"
-            {...animations.fadeInUp}
-          >
-            About Me
-          </motion.h1>
+          <div className={`relative h-[500px] ${theme.layout.borderRadius} overflow-hidden ${theme.layout.shadow}`}>
+            <Image
+              src={heroContent.image}
+              alt="Professor Yunhee Lee"
+              className="object-cover"
+              fill
+              priority
+              sizes="(max-width: 1536px) 100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
+          </div>
+
+          <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
+            <motion.div
+              className="max-w-3xl"
+              {...animations.fadeInUp}
+            >
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                About Me
+              </h1>
+              <p className="text-lg md:text-xl text-gray-200 mb-6">
+                Assistant Professor of Transportation Engineering
+              </p>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                {[
+                  { label: 'Publications', value: publications.length },
+                  { label: 'Research Areas', value: resumeData.areasOfInterest.length },
+                  { label: 'Languages', value: resumeData.languages.length },
+                  { label: 'Years Experience', value: '10+' }
+                ].map((stat, index) => (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 + index * 0.1 }}
+                    className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+                  >
+                    <div className="text-2xl md:text-3xl font-bold text-white">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-gray-300">
+                      {stat.label}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  asChild
+                  variant="default"
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                >
+                  <a href={LinkToPublications || '/publications'} className="flex items-center gap-2">
+                    <BookOpen className="h-5 w-5" />
+                    View Publications
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-blue-400 text-blue-600 bg-white hover:bg-blue-600 hover:text-white transition-colors duration-300"
+                >
+                  <a href={LinkToCV} className="flex items-center gap-2">
+                    <Download className="h-5 w-5" />
+                    Download CV
+                  </a>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
 
         <div className="space-y-12">
@@ -166,7 +223,7 @@ function PublicationsSection() {
             variant="link"
             className="text-lg text-white border-blue-600 bg-blue-600 group relative"
           >
-            <a href={LinkToPublications} className="flex items-center gap-2">
+            <a href={LinkToPublications || '/publications'} className="flex items-center gap-2">
               More publications
               <ArrowRight className="h-5 w-5 bounce-x" />
             </a>

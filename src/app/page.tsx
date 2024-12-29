@@ -178,7 +178,7 @@ function RecentPublications() {
                         Journal: &nbsp;
                       </span>{pub.journal}</div>
                       <Link href={pub.link} target="_blank" rel="noopener noreferrer" className=" hover:text-blue-700 underline">
-                        Read more
+                      Read Publication
                       </Link>
                     </div>
 
