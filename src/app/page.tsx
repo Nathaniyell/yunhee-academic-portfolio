@@ -9,9 +9,9 @@ import { ArrowRight, Award, Download, Lightbulb } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
-import aboutImg from "@/public/images/about2.jpg"
+// import aboutImg from "@/public/images/about2.jpg"
 import SectionHeader from '@/components/SectionHeader'
-import { AboutData, LinkToCV, YunheeAboutImage } from '@/lib/data'
+import { AboutData, LinkToCV, YunheeAboutImage, resumeData } from '@/lib/data'
 
 export default function Home() {
   return (
@@ -54,7 +54,7 @@ function AboutSection() {
           </div>
           <div className="relative h-[400px]">
             <Image
-              src={aboutImg || YunheeAboutImage}
+              src={YunheeAboutImage}
               alt="Professor Yunhee Lee"
               fill
               className="rounded shadow"
@@ -68,16 +68,17 @@ function AboutSection() {
 }
 
 function ResearchInterests() {
+  const newInterests = resumeData.areasOfInterest
   const interests = [
-    { title: "Urban Planning", description: "Exploring sustainable city development and smart urban solutions.", icon: <Lightbulb className="h-8 w-8 text-yellow-500" /> },
-    { title: "Environmental Sustainability", description: "Researching eco-friendly practices and green technologies for urban areas.", icon: <Lightbulb className="h-8 w-8 text-green-500" /> },
-    { title: "Smart Cities", description: "Investigating the integration of technology in urban infrastructure and services.", icon: <Lightbulb className="h-8 w-8 text-blue-500" /> },
+    { title: newInterests[0], icon: <Lightbulb className="h-8 w-8 text-yellow-500" /> },
+    { title: newInterests[1],  icon: <Lightbulb className="h-8 w-8 text-green-500" /> },
+    { title: newInterests[2],icon: <Lightbulb className="h-8 w-8 text-blue-500" /> },
   ]
 
   return (
     <section className="px-4">
       <div className="max-w-5xl mx-auto">
-        <SectionHeader title="Research Interests & Expertise" />
+        <SectionHeader title="Research Interests" />
         <div className="grid md:grid-cols-3 gap-6 mt-8">
           {interests.map((interest, index) => (
             <motion.div key={index} whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
@@ -88,9 +89,7 @@ function ResearchInterests() {
                     <span>{interest.title}</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-slate-500">{interest.description}</p>
-                </CardContent>
+                
               </Card>
             </motion.div>
           ))}
@@ -102,6 +101,7 @@ function ResearchInterests() {
 
 function Achievements() {
   const [isExpanded, setIsExpanded] = useState(false)
+  const highlights = resumeData.experience.map(exp=>exp.highlights)
 
   return (
     <section className="bg-blue-50 py-12 px-4">

@@ -191,29 +191,41 @@ export const resumeData = {
       
     },
     {
-      period: "2015-2017",
-      title: "Urban Planning Consultant",
-      company: "City Planning Associates",
-      location: "Seoul, South Korea",
-      description: "Provided consulting services for sustainable urban development projects",
+      title: "Transport Service Manager",
+      company: "Casablanca-Settat Regional Government",
+      location: "Casablanca, Morocco",
+      period: "March 2017 – February 2019",
+      description: "Managed regional transportation systems with a focus on sustainability, efficiency, and policy development.",
       highlights: [
-        "Developed sustainability frameworks for 3 major cities",
-        "Conducted environmental impact assessments",
-        "Collaborated with international planning agencies"
+        "Designed and implemented regional connectivity projects, improving public transit by 15%",
+        "Created policy frameworks to support low-carbon mobility solutions across the region",
+        "Collaborated with international experts to integrate modern transport technologies"
       ]
     },
-    {
-      period: "2013-2015",
-      title: "Graduate Research Assistant",
-      company: "Seoul National University",
+      {
+      title: "International Consultant",
+      company: "Korea Land and Housing Corporation",
       location: "Seoul, South Korea",
-      description: "Assisted in research projects related to urban environmental systems",
+      period: "January 2016 – August 2016",
+      description: "Provided strategic guidance on smart city infrastructure and sustainable urban development for emerging cities.",
       highlights: [
-        "Contributed to 2 major research projects",
-        "Managed environmental data collection and analysis",
-        "Presented at 3 international conferences"
+        "Drafted feasibility studies for urban smart grid systems and transit-oriented developments",
+        "Facilitated cross-sector collaboration between government, private industry, and academia",
+        "Authored technical recommendations for infrastructure investment strategies"
       ]
-    }
+    },
+     {
+      title: "Manager of Urban Mobility Service",
+      company: "Casablanca Metropolitan City Government",
+      location: "Casablanca, Morocco",
+      period: "September 2011 – June 2015",
+      description: "Directed the modernization of metropolitan transportation systems, focusing on sustainability and accessibility.",
+      highlights: [
+        "Introduced transit-oriented development strategies, reducing congestion by 20%",
+        "Led environmental impact assessments for multimodal transit projects",
+        "Partnered with international organizations to secure funding for mobility initiatives"
+      ]
+    } 
   ],
   education: [
     {
@@ -365,6 +377,6 @@ export const AboutData = "As an Assistant Professor in the Department of Transpo
 export const AcademicBackground = "With a Ph.D. in Transportation Engineering and Smart Cities, my academic journey has been dedicated to addressing complex urban challenges. By leveraging data analytics, machine learning, and GIS technologies, I have developed innovative frameworks that integrate sustainability and equity into urban and transportation planning."
 
 //Include the image in the /public/images folder and name it as YunheeAboutImage.jpg. Then add it here as a string. Alternatively, if you have the image stored on the web, you can include the https:// link to the image between the string
-export const YunheeAboutImage = "../../public/images/yunhee-pp.jpg"
+export const YunheeAboutImage = "/public/images/yunhee-pp.jpg"
 
 
