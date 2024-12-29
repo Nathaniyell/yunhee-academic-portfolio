@@ -361,10 +361,10 @@ export const LinkToPublications = ""
 export const LinkToProjects = ""
 export const LinkToContact = ""
 export const LinkToNews = ""
-export const AboutData = " As a Ph.D. Assistant Research Professor in the Department of ... at the ... University, I am dedicated to bridging the gap between academic research and real-world applications in urban planning and sustainability."
-export const AcademicBackground = "With a Ph.D. in ..., my research journey has been focused on developing innovative solutions for urban challenges through the application of data analytics and machine learning technologies."
+export const AboutData = "As an Assistant Professor in the Department of Transportation Engineering at the University of Seoul, I am committed to advancing sustainable urban mobility and smart city development. My work bridges academic research and practical applications, driving impactful solutions in urban planning, transportation systems optimization, and environmental sustainability."
+export const AcademicBackground = "With a Ph.D. in Transportation Engineering and Smart Cities, my academic journey has been dedicated to addressing complex urban challenges. By leveraging data analytics, machine learning, and GIS technologies, I have developed innovative frameworks that integrate sustainability and equity into urban and transportation planning."
 
 //Include the image in the /public/images folder and name it as YunheeAboutImage.jpg. Then add it here as a string. Alternatively, if you have the image stored on the web, you can include the https:// link to the image between the string
-export const YunheeAboutImage = "/public/images/yubhee-pp.jpg"
+export const YunheeAboutImage = "../../public/images/yunhee-pp.jpg"
 
 
