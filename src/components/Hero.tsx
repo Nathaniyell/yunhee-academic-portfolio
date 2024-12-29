@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { BookOpen } from 'lucide-react'
 import Link from 'next/link'
 // import HeroBg from "@/public/images/herobg.jpg"
+import { heroContent } from '@/lib/data'
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -19,7 +20,7 @@ export default function HeroSection() {
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden">
       <Image
-        src="https://i.imghippo.com/files/igJ8471bGk.jpeg"
+        src={heroContent.image}
         alt="Academic background"
         layout="fill"
         objectFit="cover"
@@ -29,10 +30,10 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 shine-text">
-          Welcome to My Portfolio
+        {heroContent.title}
         </h1>
         <p className="text-xl sm:text-2xl lg:max-w-3xl text-gray-200 mb-8">
-        Your one-stop destination to explore my work, research, and contributions to ...
+        {heroContent.subtitle}
         </p>
         <div className="mt-10 flex justify-center space-x-4">
           <Button 
