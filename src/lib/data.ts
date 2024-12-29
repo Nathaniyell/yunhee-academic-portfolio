@@ -382,30 +382,8 @@ export const teachingData = [
   }
 ]
 
-export const blogArticles = [
-  //link here means the link to that particular blog post/article
-  {
-    id: 1,
-    title: "The Future of Smart Cities: Integrating IoT and AI",
-    year: 2023,
-    tldr: "Exploring how Internet of Things (IoT) and Artificial Intelligence (AI) are shaping the future of urban planning and city management.",
-    link: "/blog/future-of-smart-cities"
-  },
-  {
-    id: 2,
-    title: "Sustainable Urban Mobility: Challenges and Solutions",
-    year: 2023,
-    tldr: "Analyzing current challenges in urban transportation and proposing innovative solutions for sustainable mobility.",
-    link: "/blog/sustainable-urban-mobility"
-  },
-  {
-    id: 3,
-    title: "Green Building Technologies: A Path to Net-Zero Cities",
-    year: 2022,
-    tldr: "Examining cutting-edge green building technologies and their potential to create net-zero energy cities.",
-    link: "/blog/green-building-technologies"
-  }
-]
+export const blogArticles =    "Coming Soon"
+
 
 //Please include the links to the different websites here
 //Example: const blogLink = "https://www.example.com"
