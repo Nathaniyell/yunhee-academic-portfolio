@@ -4,9 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { ChevronRight, BookOpen, Newspaper, PenTool, ArrowRight, Download } from 'lucide-react'
-import aboutImg from "@/public/images/about2.jpg"
-import { publications, news, blogArticles, theme, animations, LinkToBlog, LinkToNews, LinkToPublications, AboutData, AcademicBackground, LinkToCV, } from '@/lib/data'
+import { ChevronRight, BookOpen,  PenTool, ArrowRight, Download } from 'lucide-react'
+import { publications, blogArticles, theme, animations, LinkToBlog, LinkToPublications, AboutData, AcademicBackground, LinkToCV, YunheeAboutImage, } from '@/lib/data'
 import Image from 'next/image'
 
 export default function AboutPage() {
@@ -18,7 +17,7 @@ export default function AboutPage() {
           {...animations.fadeIn}
         >
           <Image
-            src={aboutImg}
+            src={YunheeAboutImage}
             alt="Professor Yunhee Lee"
             className="object-cover"
             fill
@@ -45,12 +44,7 @@ export default function AboutPage() {
               >
                 Publications
               </TabsTrigger>
-              <TabsTrigger
-                value="news"
-                className={`data-[state=active]:bg-${theme.colors.accent.blue.light} data-[state=active]:text-${theme.colors.accent.blue.DEFAULT}`}
-              >
-                News
-              </TabsTrigger>
+          
               <TabsTrigger
                 value="blog"
                 className={`data-[state=active]:bg-${theme.colors.accent.blue.light} data-[state=active]:text-${theme.colors.accent.blue.DEFAULT}`}
@@ -61,9 +55,7 @@ export default function AboutPage() {
             <TabsContent value="publications">
               <PublicationsSection />
             </TabsContent>
-            <TabsContent value="news">
-              <NewsSection />
-            </TabsContent>
+           
             <TabsContent value="blog">
               <BlogSection />
             </TabsContent>
@@ -192,52 +184,7 @@ function PublicationsSection() {
   )
 }
 
-function NewsSection() {
-  return (
-    <ScrollArea className="h-[400px] w-full rounded-md border p-4">
-      <div className="space-y-8">
-        {news.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-          >
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold flex items-center">
-                  <Newspaper className="h-5 w-5 mr-2 text-blue-600" />
-                  {item.title}
-                </h3>
-                <p className="text-slate-500 mt-2">{item.description}</p>
-                <Button asChild variant="link" className="mt-2 p-0">
-                  <a href={item.link}>Read More</a>
-                </Button>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="flex justify-center"
-        >
-          <Button 
-            asChild 
-            variant="link" 
-            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
-          >
-            <a href={LinkToNews} className="flex items-center gap-2">
-             More news
-              <ArrowRight className="h-5 w-5 bounce-x" />
-            </a>
-          </Button>
-        </motion.div>
-      </div>
-    </ScrollArea>
-  )
-}
+
 
 function BlogSection() {
   return (

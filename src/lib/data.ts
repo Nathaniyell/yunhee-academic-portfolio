@@ -229,32 +229,54 @@ export const resumeData = {
   ],
   education: [
     {
-      degree: "Ph.D. in Urban Planning",
-      department: "Department of Urban Studies",
-      university: "University Name",
-      location: "City, Country",
-      period: "2015-2020",
-      description: "Focus on sustainable urban development",
-      highlights: ["Outstanding Research Award"],
-      thesis: "Smart Cities and Sustainable Development"
+      degree: "Ph.D. in Transportation Engineering and Smart Cities",
+      department: "Department of Transportation Engineering",
+      university: "University of Seoul",
+      location: "Seoul, South Korea",
+      period: "March 2019 – February 2024",
+      description: "Advanced research on transportation systems optimization, sustainable urban mobility, and smart city frameworks, integrating data analytics and machine learning techniques.",
+      highlights: [
+        "Recipient of the Distinguished Paper Award (2024) for research on mobility hubs",
+        "Awarded the Smart City Department Scholarship for academic excellence (2020)",
+        "Published over 10 peer-reviewed articles on topics including equity in urban transit and public health integration"
+      ],
+      thesis: "A Planning Support System for a 15-Minute City"
     },
     {
-      period: "2013-2015",
-      degree: "M.Sc.",
-      department: "Environmental Engineering",
-      university: "Seoul National University",
+      degree: "M.Sc. in Urban and Regional Development",
+      department: "Department of Urban Planning",
+      university: "University of Seoul",
       location: "Seoul, South Korea",
-      description: "Specialized in environmental impact assessment and urban sustainability",
-      thesis: "Urban Environmental Systems Analysis"
+      period: "August 2015 – February 2017",
+      description: "Focused on sustainable urban planning, transportation modeling, and regional growth strategies.",
+      highlights: [
+        "Recipient of the KOICA Scholarship (2015–2016) for outstanding academic performance",
+        "Recognized for Distinguished Academic Achievement (2016)"
+      ],
+      thesis: "Enhancing the role of Grand Taxis in Casablanca, Morocco"
     },
     {
-      period: "2009-2013",
-      degree: "B.Eng.",
-      department: "Civil Engineering",
-      university: "Korea University",
-      location: "Seoul, South Korea",
-      description: "Focus on urban infrastructure and planning",
-      highlights: ["Graduated summa cum laude", "Presidential Scholar"]
+      degree: "M.Sc. in Telecommunications",
+      department: "Institut National des Postes et Télécommunications",
+      university: "Institut National des Postes et Télécommunications",
+      location: "Rabat, Morocco",
+      period: "September 2007 – June 2010",
+      description: "Specialized in computational systems and network design, with applications in urban planning and technology integration.",
+      highlights: [
+        "Demonstrating excellence in engineering and technical applications"
+      ],
+      thesis: "Conceiving and Designing a Safe and Optimized Local Network for the Mohamed-6 Foundation"
+    },
+    {
+      degree: "B.Sc. in Mathematics and Physics",
+      department: "Preparatory Classes for Engineering Schools",
+      university: "Classes Préparatoires des Grandes Écoles d’Ingénieur",
+      location: "Marrakech, Morocco",
+      period: "September 2004 – June 2007",
+      description: "Developed a strong analytical foundation in mathematics and physics, preparing for advanced studies in engineering.",
+      highlights: [
+        "Ranked 380th out of more than 4,000 candidates in the national final two-year exam in Morocco"
+      ]
     }
   ],
   skills: [
