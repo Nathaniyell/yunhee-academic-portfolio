@@ -57,7 +57,7 @@ function AboutSection() {
               src={YunheeAboutImage}
               alt="Professor Yunhee Lee"
               fill
-              className="rounded shadow"
+              className="rounded shadow object-center"
               priority
             />
           </div>

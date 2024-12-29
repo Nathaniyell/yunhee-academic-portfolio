@@ -121,7 +121,7 @@ export const resumeData = {
     {
       name: "AI-Driven Shared Vehicle Management System",
       description: "Aiming to develop a robust management system for autonomous shared vehicles, leveraging artificial intelligence and deep learning techniques.",
-      year: 2021-2022
+      year: 2021 - 2022
     }
   ],
   areasOfInterest: [
@@ -162,12 +162,12 @@ export const resumeData = {
       highlights: [
         "Managing multidisciplinary research teams integrating machine learning and GIS for smart urban mobility planning solutions",
         "Authoring peer-reviewed publications on mobility hubs, equity in transportation, and public health integration",
-        "Guiding graduate students on thesis topics related to different urban analytics, sustainable planning, and city development" 
-      ],    
-    projects: [
-      "Urban Mobility Optimization Using AI and Deep Learning",
+        "Guiding graduate students on thesis topics related to different urban analytics, sustainable planning, and city development"
       ],
-      
+      projects: [
+        "Urban Mobility Optimization Using AI and Deep Learning",
+      ],
+
     },
     {
       title: "Research Fellow",
@@ -178,7 +178,7 @@ export const resumeData = {
       highlights: [
         "Leading research on virus spread mitigation in public transportation, contributing to national safety protocols",
         "Publishing peer-reviewed articles and book chapters in journals such as Journal of Transport Geography"
-    ],
+      ],
       projects: [
         "Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users",
         "Development of a System for Enhancing Mobility Convenience for Transportation-Disadvantaged Populations: Deep Learning Algorithm Construction and Travel Pattern Modeling (Phase 2)",
@@ -188,7 +188,7 @@ export const resumeData = {
         "Continuation of Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Phase 2-1)",
         "Final Phase of Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Phase 2-2)"
       ],
-      
+
     },
     {
       title: "Transport Service Manager",
@@ -202,7 +202,7 @@ export const resumeData = {
         "Collaborated with international experts to integrate modern transport technologies"
       ]
     },
-      {
+    {
       title: "International Consultant",
       company: "Korea Land and Housing Corporation",
       location: "Seoul, South Korea",
@@ -214,7 +214,7 @@ export const resumeData = {
         "Authored technical recommendations for infrastructure investment strategies"
       ]
     },
-     {
+    {
       title: "Manager of Urban Mobility Service",
       company: "Casablanca Metropolitan City Government",
       location: "Casablanca, Morocco",
@@ -225,7 +225,7 @@ export const resumeData = {
         "Led environmental impact assessments for multimodal transit projects",
         "Partnered with international organizations to secure funding for mobility initiatives"
       ]
-    } 
+    }
   ],
   education: [
     {
@@ -271,47 +271,47 @@ export const resumeData = {
 
 export const publications = [
   {
-  title: "Optimizing shared bike systems for economic gain: Integrating land use and retail",
-  journal: "Journal of Transport Geography",
-  description: "The study focuses on optimizing shared-bike station locations in Seoul, emphasizing the role of cycling in promoting low-carbon mobility and economic revitalization. A unique approach was used, incorporating the retail activity index, land-use mix, transit proximity, and population and employment densities to determine optimal station locations",
-  year: "2024",
-  link: "https://www.sciencedirect.com/science/article/pii/S0966692324001297?via%3Dihub"
-},
-{
-  title: "Locating carbon neutral mobility hubs using artificial intelligence techniques",
-  journal: "Energy Sources, Part A: Recovery, Utilization, and Environmental Effects",
-  description: "The study explores the use of Genetic Algorithms (GA) and the Ensemble methods like Random Forest Regressor and XGBoost for optimizing mobility hub locations while reducing travel time and carbon emissions",
-  year: "2024",
-  link: "https://www.nature.com/articles/s41598-024-62701-z"
-},
-{
-  title: "The elasticity and efficiency of carbon reduction strategies in transportation",
-  journal: "Energy Sources, Part A: Recovery, Utilization, and Environmental Effects",
-  description: "The study focuses on evaluating the effectiveness of various transport carbon mitigation policies, addressing knowledge gaps and providing a comparative overview. A model using mixed-effects meta-regression and carbon elasticity was employed to assess policies like shared bikes, mobility hubs, low emission zones, congestion pricing, electric vehicles, and hydrogen vehicles",
-  year: "2024",
-  link: "https://www.tandfonline.com/doi/full/10.1080/15567036.2023.2276380"
-},
-{
-  title: "A Planning Support System for Boosting Bikeability in Seoul",
-  journal: "International Conference on Computers in Urban Planning and Urban Management",
-  description: "The research discusses the development of a Planning Support System (PSS) aimed at improving the shared-bike system in Seoul, Korea, by using a bikeability index. The study identifies key global and local variables affecting the system's efficacy and develops change scenarios to enhance performance",
-  year: "2023",
-  link: "https://link.springer.com/chapter/10.1007/978-3-031-31746-0_9"
-},
- {
-  title: "Mining groups of factors influencing bus/minibus crash severities on poor pavement condition roads considering different lighting status",
-  journal: "Traffic Injury Prevention",
-  description: "The study uses data mining to identify crash-risk factors for bus/minibus crashes on poor roads under different lighting conditions: daylight, night with streetlights, and night without streetlight.",
-  year: "2022",
-  link: "https://www.tandfonline.com/doi/full/10.1080/15389588.2022.2066658"
-},
- {
-  title: "Urban form and public transport design",
-  journal: "Urban Form and Accessibility",
-  description: "The study explores the relationship between urban form and public transport design, highlighting how city characteristics influence transport systems. And it discusses guidelines from authorities and researchers aimed at improving public transport services and promoting urban sustainability by enhancing access, walking, and biking ",
-  year: "2021",
-  link: "https://www.sciencedirect.com/science/article/abs/pii/B9780128198223000183?via%3Dihub"
-}
+    title: "Optimizing shared bike systems for economic gain: Integrating land use and retail",
+    journal: "Journal of Transport Geography",
+    description: "The study focuses on optimizing shared-bike station locations in Seoul, emphasizing the role of cycling in promoting low-carbon mobility and economic revitalization. A unique approach was used, incorporating the retail activity index, land-use mix, transit proximity, and population and employment densities to determine optimal station locations",
+    year: "2024",
+    link: "https://www.sciencedirect.com/science/article/pii/S0966692324001297?via%3Dihub"
+  },
+  {
+    title: "Locating carbon neutral mobility hubs using artificial intelligence techniques",
+    journal: "Energy Sources, Part A: Recovery, Utilization, and Environmental Effects",
+    description: "The study explores the use of Genetic Algorithms (GA) and the Ensemble methods like Random Forest Regressor and XGBoost for optimizing mobility hub locations while reducing travel time and carbon emissions",
+    year: "2024",
+    link: "https://www.nature.com/articles/s41598-024-62701-z"
+  },
+  {
+    title: "The elasticity and efficiency of carbon reduction strategies in transportation",
+    journal: "Energy Sources, Part A: Recovery, Utilization, and Environmental Effects",
+    description: "The study focuses on evaluating the effectiveness of various transport carbon mitigation policies, addressing knowledge gaps and providing a comparative overview. A model using mixed-effects meta-regression and carbon elasticity was employed to assess policies like shared bikes, mobility hubs, low emission zones, congestion pricing, electric vehicles, and hydrogen vehicles",
+    year: "2024",
+    link: "https://www.tandfonline.com/doi/full/10.1080/15567036.2023.2276380"
+  },
+  {
+    title: "A Planning Support System for Boosting Bikeability in Seoul",
+    journal: "International Conference on Computers in Urban Planning and Urban Management",
+    description: "The research discusses the development of a Planning Support System (PSS) aimed at improving the shared-bike system in Seoul, Korea, by using a bikeability index. The study identifies key global and local variables affecting the system's efficacy and develops change scenarios to enhance performance",
+    year: "2023",
+    link: "https://link.springer.com/chapter/10.1007/978-3-031-31746-0_9"
+  },
+  {
+    title: "Mining groups of factors influencing bus/minibus crash severities on poor pavement condition roads considering different lighting status",
+    journal: "Traffic Injury Prevention",
+    description: "The study uses data mining to identify crash-risk factors for bus/minibus crashes on poor roads under different lighting conditions: daylight, night with streetlights, and night without streetlight.",
+    year: "2022",
+    link: "https://www.tandfonline.com/doi/full/10.1080/15389588.2022.2066658"
+  },
+  {
+    title: "Urban form and public transport design",
+    journal: "Urban Form and Accessibility",
+    description: "The study explores the relationship between urban form and public transport design, highlighting how city characteristics influence transport systems. And it discusses guidelines from authorities and researchers aimed at improving public transport services and promoting urban sustainability by enhancing access, walking, and biking ",
+    year: "2021",
+    link: "https://www.sciencedirect.com/science/article/abs/pii/B9780128198223000183?via%3Dihub"
+  }
 ]
 export const news = [
   {
@@ -398,6 +398,6 @@ export const AboutData = "As an Assistant Professor in the Department of Transpo
 export const AcademicBackground = "With a Ph.D. in Transportation Engineering and Smart Cities, my academic journey has been dedicated to addressing complex urban challenges. By leveraging data analytics, machine learning, and GIS technologies, I have developed innovative frameworks that integrate sustainability and equity into urban and transportation planning."
 
 //Include the image in the /public/images folder and name it as YunheeAboutImage.jpg. Then add it here as a string. Alternatively, if you have the image stored on the web, you can include the https:// link to the image between the string
-export const YunheeAboutImage = "/public/images/yunhee-pp.jpg"
+export const YunheeAboutImage = "/images/yunhee-pp.jpg"
 
 
