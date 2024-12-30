@@ -28,21 +28,21 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
           </div>
 
-          <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
+          <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-12">
             <motion.div
               className="max-w-3xl"
               {...animations.fadeInUp}
             >
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
                 About Me
               </h1>
-              <p className="text-lg md:text-xl text-gray-200 mb-6">
+              <p className="text-base md:text-xl text-gray-200 mb-4 lg:mb-6">
                 Assistant Professor of Transportation Engineering
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 {[
-                  { label: 'Publications', value: publications.length },
+                  { label: 'Publications', value: `${publications.length}+` },
                   { label: 'Research Areas', value: resumeData.areasOfInterest.length },
                   { label: 'Languages', value: resumeData.languages.length },
                   { label: 'Years Experience', value: '10+' }
