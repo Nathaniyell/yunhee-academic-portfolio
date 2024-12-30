@@ -386,32 +386,11 @@ export const news = [
 ];
 export const teachingData = [
   {
-    title: "Introduction to Urban Planning",
-    years: "2023-Present",
-    description: "Fundamental concepts and principles of urban planning for undergraduate students",
-    materials: [
-      { name: "Lecture Slides", url: "/materials/urban-planning-slides.pdf" },
-      { name: "Course Notes", url: "/materials/urban-planning-notes.pdf" }
-    ]
+    title: "Advanced Research and Analysis Methods",
+    years: "2024",
+    description: "Fundamental concepts and principles for conducting research for graduate students. Also possible practical methods to be implemented in a variety of research problems and questions.",
   },
-  {
-    title: "Sustainable City Development",
-    years: "2023-Present",
-    description: "Advanced concepts in sustainable urban development for graduate students",
-    materials: [
-      { name: "Course Materials", url: "/materials/sustainable-dev-materials.pdf" },
-      { name: "Case Studies", url: "/materials/case-studies.pdf" }
-    ]
-  },
-  {
-    title: "Data Analytics for Urban Systems",
-    years: "2023-Present",
-    description: "Applied data analysis techniques for urban planning and systems",
-    materials: [
-      { name: "Analysis Templates", url: "/materials/analysis-templates.zip" },
-      { name: "Dataset Examples", url: "/materials/datasets.zip" }
-    ]
-  }
+ 
 ]
 
 export const blogArticles =    "Coming Soon"
