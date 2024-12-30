@@ -121,7 +121,7 @@ export const resumeData = {
     {
       name: "AI-Driven Shared Vehicle Management System",
       description: "Aiming to develop a robust management system for autonomous shared vehicles, leveraging artificial intelligence and deep learning techniques.",
-      year: 2021 - 2022
+      year: "2021-2022"
     }
   ],
   areasOfInterest: [
