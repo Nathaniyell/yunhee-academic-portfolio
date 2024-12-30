@@ -81,7 +81,7 @@ export default function AboutPage() {
                   className="border-blue-400 text-blue-600 bg-white hover:bg-blue-600 hover:text-white transition-colors duration-300"
                 >
                   <a href={LinkToCV} className="flex items-center gap-2">
-                    <Download className="h-5 w-5" />
+                    <Download className="h-5 w-5 bounce-y" />
                     Download CV
                   </a>
                 </Button>
