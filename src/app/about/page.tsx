@@ -126,7 +126,7 @@ export default function AboutPage() {
 function AboutSection() {
   return (
     <motion.section {...animations.fadeInUp}>
-      <Card>
+      <Card className='rounded-none shadow-0 shadow-none border-none'>
         <CardContent className={theme.spacing.content}>
           <p className={`text-lg text-${theme.colors.text.secondary}`}>
             {AboutData}
@@ -162,7 +162,7 @@ function AboutSection() {
 function ResearchFocus() {
   return (
     <motion.section {...animations.fadeInUp}>
-      <Card>
+      <Card className='rounded-none shadow-0 shadow-none border-none'>
         <CardHeader>
           <CardTitle className="text-2xl font-semibold text-blue-600">Research Focus</CardTitle>
         </CardHeader>
