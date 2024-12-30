@@ -52,38 +52,6 @@ export default function Page() {
 
               <p className="mt-4 text-gray-600">{course.description}</p>
 
-              {course.materials && course.materials.length > 0 && (
-                <div className="mt-6">
-                  <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">
-                    Course Materials
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {course.materials.map((material, idx) => (
-                      <a
-                        key={idx}
-                        href={material.url}
-                        className="inline-flex items-center px-4 py-2 border border-blue-600 rounded-md text-sm font-medium text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-150"
-                        download
-                      >
-                        <svg
-                          className="w-4 h-4 mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                          />
-                        </svg>
-                        {material.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
           ))}
         </div>

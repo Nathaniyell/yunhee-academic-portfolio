@@ -9,9 +9,9 @@ import { ArrowRight, Award, Download, Lightbulb } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
-import aboutImg from "@/public/images/about2.jpg"
+// import aboutImg from "@/public/images/about2.jpg"
 import SectionHeader from '@/components/SectionHeader'
-import { AboutData, LinkToCV, YunheeAboutImage } from '@/lib/data'
+import { AboutData, LinkToCV, YunheeAboutImage, resumeData, publications } from '@/lib/data'
 
 export default function Home() {
   return (
@@ -37,27 +37,27 @@ function AboutSection() {
           <div>
             <h1 className="text-3xl font-bold mb-4">Hello! I&apos;m <span className="text-blue-600">Yunhee Lee</span></h1>
             <p className="text-lg text-slate-500 mb-6">
-            {AboutData}
+              {AboutData}
             </p>
             <div className='flex gap-6 items-center'>
-            <Button asChild variant="outline" className="text-blue-600 border-blue-600 border">
-              <Link href="/about">
-                Read More <ArrowRight className="ml-1 h-4 w-4 bounce-x" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="text-white border-blue-600 bg-blue-600">
-              <Link href={LinkToCV}>
-                Download resume  <Download className="ml-1 h-4 w-4 bounce-y" />
-              </Link>
-            </Button>
+              <Button asChild variant="outline" className="text-blue-600 border-blue-600 border">
+                <Link href="/about">
+                  Read More <ArrowRight className="ml-1 h-4 w-4 bounce-x" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="text-white border-blue-600 bg-blue-600">
+                <Link href={LinkToCV}>
+                  Download resume  <Download className="ml-1 h-4 w-4 bounce-y" />
+                </Link>
+              </Button>
             </div>
           </div>
           <div className="relative h-[400px]">
             <Image
-              src={aboutImg || YunheeAboutImage}
+              src={YunheeAboutImage}
               alt="Professor Yunhee Lee"
               fill
-              className="rounded shadow"
+              className="rounded shadow object-center"
               priority
             />
           </div>
@@ -68,16 +68,17 @@ function AboutSection() {
 }
 
 function ResearchInterests() {
+  const newInterests = resumeData.areasOfInterest
   const interests = [
-    { title: "Urban Planning", description: "Exploring sustainable city development and smart urban solutions.", icon: <Lightbulb className="h-8 w-8 text-yellow-500" /> },
-    { title: "Environmental Sustainability", description: "Researching eco-friendly practices and green technologies for urban areas.", icon: <Lightbulb className="h-8 w-8 text-green-500" /> },
-    { title: "Smart Cities", description: "Investigating the integration of technology in urban infrastructure and services.", icon: <Lightbulb className="h-8 w-8 text-blue-500" /> },
+    { title: newInterests[0], icon: <Lightbulb className="h-8 w-8 text-yellow-500" /> },
+    { title: newInterests[1], icon: <Lightbulb className="h-8 w-8 text-green-500" /> },
+    { title: newInterests[2], icon: <Lightbulb className="h-8 w-8 text-blue-500" /> },
   ]
 
   return (
     <section className="px-4">
       <div className="max-w-5xl mx-auto">
-        <SectionHeader title="Research Interests & Expertise" />
+        <SectionHeader title="Research Interests" />
         <div className="grid md:grid-cols-3 gap-6 mt-8">
           {interests.map((interest, index) => (
             <motion.div key={index} whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
@@ -88,9 +89,7 @@ function ResearchInterests() {
                     <span>{interest.title}</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-slate-500">{interest.description}</p>
-                </CardContent>
+
               </Card>
             </motion.div>
           ))}
@@ -102,44 +101,45 @@ function ResearchInterests() {
 
 function Achievements() {
   const [isExpanded, setIsExpanded] = useState(false)
+  const allHighlights = resumeData.experience.flatMap(exp =>
+    exp.highlights.slice(0, 2)
+  )
 
   return (
     <section className="bg-blue-50 py-12 px-4">
       <div className="max-w-5xl mx-auto">
-        <SectionHeader title="Recognitions & Achievements" />
+        <SectionHeader
+          title="Career Highlights & Key Achievements"
+        />
         <Card className="mt-8 bg-white shadow-lg">
           <CardContent className="pt-6">
             <div className="flex items-start space-x-4">
               <Award className="h-10 w-10 text-yellow-500 flex-shrink-0 mt-1" />
               <div>
                 <p className="text-slate-500 mb-4">
-                  I am honored to have received several awards for my contributions to urban planning and sustainability research, including:
+                  Key achievements and contributions throughout my career:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-slate-500">
-                  <motion.li animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ delay: 0.2 }}>
-                    Urban Innovation Award 2023
-                  </motion.li>
-                  <motion.li animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ delay: 0.4 }}>
-                    Sustainability Research Excellence Prize
-                  </motion.li>
-                  {isExpanded && (
-                    <>
-                      <motion.li animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ delay: 0.6 }}>
-                        Smart City Development Grant
-                      </motion.li>
-                      <motion.li animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ delay: 0.8 }}>
-                        Environmental Policy Impact Award
-                      </motion.li>
-                    </>
-                  )}
+                  {allHighlights.slice(0, isExpanded ? undefined : 4).map((highlight, index) => (
+                    <motion.li
+                      key={index}
+                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      transition={{ delay: index * 0.2 }}
+                    >
+                      {highlight}
+                    </motion.li>
+                  ))}
                 </ul>
-                <Button
-                  variant="link"
-                  onClick={() => setIsExpanded(!isExpanded)}
-                  className="mt-4 p-0 h-auto font-semibold text-blue-600"
-                >
-                  {isExpanded ? 'Show less' : 'Show more'}
-                </Button>
+                {allHighlights.length > 4 && (
+                  <Button
+                    variant="link"
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    className="mt-4 p-0 h-auto font-semibold text-blue-600"
+                  >
+                    {isExpanded ? 'Show less' : 'Show more'}
+                  </Button>
+                )}
               </div>
             </div>
           </CardContent>
@@ -150,11 +150,7 @@ function Achievements() {
 }
 
 function RecentPublications() {
-  const publications = [
-    { title: "The Future of Sustainable Urban Mobility", journal: "Journal of Urban Planning", year: 2023 },
-    { title: "Smart Grid Integration in Developing Cities", journal: "Sustainable Energy Review", year: 2022 },
-    { title: "Green Spaces and Mental Health in Urban Areas", journal: "Environmental Psychology Today", year: 2021 },
-  ]
+  const recentPublications = publications.slice(0, 3)
 
   return (
     <section className="px-4">
@@ -168,7 +164,7 @@ function RecentPublications() {
           </Button>
         </div>
         <div className="space-y-4">
-          {publications.map((pub, index) => (
+          {recentPublications.map((pub, index) => (
             <motion.div key={index} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 400 }}>
               <Card className="bg-white shadow hover:shadow-md transition-shadow duration-300">
                 <CardHeader>
@@ -176,8 +172,18 @@ function RecentPublications() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-500">{pub.journal}</span>
+                    <div className="flex flex-col space-y-2">
+
+                      <div className="text-slate-500"><span className="font-bold">
+                        Journal: &nbsp;
+                      </span>{pub.journal}</div>
+                      <Link href={pub.link} target="_blank" rel="noopener noreferrer" className=" hover:text-blue-700 underline">
+                      Read Publication
+                      </Link>
+                    </div>
+
                     <Badge variant="secondary" className="bg-blue-100 text-blue-600">{pub.year}</Badge>
+
                   </div>
                 </CardContent>
               </Card>

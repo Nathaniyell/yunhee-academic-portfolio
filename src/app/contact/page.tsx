@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BookOpen, Database, Mail } from 'lucide-react'
 import type { LucideIcon } from "lucide-react"
+import { googleScholarProfileLink, email, facebookProfileLink, twitterProfileLink, githubProfileLink, linkedInProfileLink, researchGateProfileLink } from '@/lib/data'
 
 type IconComponent = LucideIcon | ((props: React.SVGProps<SVGSVGElement>) => JSX.Element);
 
@@ -41,44 +42,44 @@ const socialLinks: SocialLink[] = [
   {
     name: "LinkedIn",
     icon: LinkedInIcon,
-    href: "https://linkedin.com/in/yourprofile",
+    href: linkedInProfileLink,
     description: "Connect professionally"
   },
   {
     name: "Google Scholar",
     icon: BookOpen,
-    href: "https://scholar.google.com/citations?user=yourid",
+    href: googleScholarProfileLink,
     description: "View my publications"
   },
   {
     name: "ResearchGate",
     icon: Database,
-    href: "https://www.researchgate.net/profile/yourprofile",
+    href: researchGateProfileLink,
     description: "Research network"
   },
   {
     name: "Facebook",
     icon: FacebookIcon,
-    href: "https://facebook.com/yourprofile",
+    href: facebookProfileLink,
     description: "Social updates"
   },
   {
     name: "X",
     icon: XIcon,
-    href: "https://twitter.com/yourhandle",
+    href: twitterProfileLink,
     description: "Latest thoughts"
   },
   {
     name: "GitHub",
     icon: GitHubIcon,
-    href: "https://github.com/yourusername",
+    href: githubProfileLink,
     description: "Code repositories"
   },
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:your.email@example.com",
-    description: "your.email@example.com"
+    href: email,
+    description: email
   }
 ]
 

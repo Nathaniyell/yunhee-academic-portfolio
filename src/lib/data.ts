@@ -121,7 +121,7 @@ export const resumeData = {
     {
       name: "AI-Driven Shared Vehicle Management System",
       description: "Aiming to develop a robust management system for autonomous shared vehicles, leveraging artificial intelligence and deep learning techniques.",
-      year: 2021-2022
+      year: "2021-2022"
     }
   ],
   areasOfInterest: [
@@ -162,12 +162,12 @@ export const resumeData = {
       highlights: [
         "Managing multidisciplinary research teams integrating machine learning and GIS for smart urban mobility planning solutions",
         "Authoring peer-reviewed publications on mobility hubs, equity in transportation, and public health integration",
-        "Guiding graduate students on thesis topics related to different urban analytics, sustainable planning, and city development" 
-      ],    
-    projects: [
-      "Urban Mobility Optimization Using AI and Deep Learning",
+        "Guiding graduate students on thesis topics related to different urban analytics, sustainable planning, and city development"
       ],
-      
+      projects: [
+        "Urban Mobility Optimization Using AI and Deep Learning",
+      ],
+
     },
     {
       title: "Research Fellow",
@@ -178,7 +178,7 @@ export const resumeData = {
       highlights: [
         "Leading research on virus spread mitigation in public transportation, contributing to national safety protocols",
         "Publishing peer-reviewed articles and book chapters in journals such as Journal of Transport Geography"
-    ],
+      ],
       projects: [
         "Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users",
         "Development of a System for Enhancing Mobility Convenience for Transportation-Disadvantaged Populations: Deep Learning Algorithm Construction and Travel Pattern Modeling (Phase 2)",
@@ -188,96 +188,183 @@ export const resumeData = {
         "Continuation of Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Phase 2-1)",
         "Final Phase of Research on Detection and Control Technologies for MERS Virus Spread Routes: Focusing on Public Transportation Users (Phase 2-2)"
       ],
-      
+
     },
     {
-      period: "2015-2017",
-      title: "Urban Planning Consultant",
-      company: "City Planning Associates",
-      location: "Seoul, South Korea",
-      description: "Provided consulting services for sustainable urban development projects",
+      title: "Transport Service Manager",
+      company: "Casablanca-Settat Regional Government",
+      location: "Casablanca, Morocco",
+      period: "March 2017 – February 2019",
+      description: "Managed regional transportation systems with a focus on sustainability, efficiency, and policy development.",
       highlights: [
-        "Developed sustainability frameworks for 3 major cities",
-        "Conducted environmental impact assessments",
-        "Collaborated with international planning agencies"
+        "Designed and implemented regional connectivity projects, improving public transit by 15%",
+        "Created policy frameworks to support low-carbon mobility solutions across the region",
+        "Collaborated with international experts to integrate modern transport technologies"
       ]
     },
     {
-      period: "2013-2015",
-      title: "Graduate Research Assistant",
-      company: "Seoul National University",
+      title: "International Consultant",
+      company: "Korea Land and Housing Corporation",
       location: "Seoul, South Korea",
-      description: "Assisted in research projects related to urban environmental systems",
+      period: "January 2016 – August 2016",
+      description: "Provided strategic guidance on smart city infrastructure and sustainable urban development for emerging cities.",
       highlights: [
-        "Contributed to 2 major research projects",
-        "Managed environmental data collection and analysis",
-        "Presented at 3 international conferences"
+        "Drafted feasibility studies for urban smart grid systems and transit-oriented developments",
+        "Facilitated cross-sector collaboration between government, private industry, and academia",
+        "Authored technical recommendations for infrastructure investment strategies"
+      ]
+    },
+    {
+      title: "Manager of Urban Mobility Service",
+      company: "Casablanca Metropolitan City Government",
+      location: "Casablanca, Morocco",
+      period: "September 2011 – June 2015",
+      description: "Directed the modernization of metropolitan transportation systems, focusing on sustainability and accessibility.",
+      highlights: [
+        "Introduced transit-oriented development strategies, reducing congestion by 20%",
+        "Led environmental impact assessments for multimodal transit projects",
+        "Partnered with international organizations to secure funding for mobility initiatives"
       ]
     }
   ],
   education: [
     {
-      degree: "Ph.D. in Urban Planning",
-      department: "Department of Urban Studies",
-      university: "University Name",
-      location: "City, Country",
-      period: "2015-2020",
-      description: "Focus on sustainable urban development",
-      highlights: ["Outstanding Research Award"],
-      thesis: "Smart Cities and Sustainable Development"
+      degree: "Ph.D. in Transportation Engineering and Smart Cities",
+      department: "Department of Transportation Engineering",
+      university: "University of Seoul",
+      location: "Seoul, South Korea",
+      period: "March 2019 – February 2024",
+      description: "Advanced research on transportation systems optimization, sustainable urban mobility, and smart city frameworks, integrating data analytics and machine learning techniques.",
+      highlights: [
+        "Recipient of the Distinguished Paper Award (2024) for research on mobility hubs",
+        "Awarded the Smart City Department Scholarship for academic excellence (2020)",
+        "Published over 10 peer-reviewed articles on topics including equity in urban transit and public health integration"
+      ],
+      thesis: "A Planning Support System for a 15-Minute City"
     },
     {
-      period: "2013-2015",
-      degree: "M.Sc.",
-      department: "Environmental Engineering",
-      university: "Seoul National University",
+      degree: "M.Sc. in Urban and Regional Development",
+      department: "Department of Urban Planning",
+      university: "University of Seoul",
       location: "Seoul, South Korea",
-      description: "Specialized in environmental impact assessment and urban sustainability",
-      thesis: "Urban Environmental Systems Analysis"
+      period: "August 2015 – February 2017",
+      description: "Focused on sustainable urban planning, transportation modeling, and regional growth strategies.",
+      highlights: [
+        "Recipient of the KOICA Scholarship (2015–2016) for outstanding academic performance",
+        "Recognized for Distinguished Academic Achievement (2016)"
+      ],
+      thesis: "Enhancing the role of Grand Taxis in Casablanca, Morocco"
     },
     {
-      period: "2009-2013",
-      degree: "B.Eng.",
-      department: "Civil Engineering",
-      university: "Korea University",
-      location: "Seoul, South Korea",
-      description: "Focus on urban infrastructure and planning",
-      highlights: ["Graduated summa cum laude", "Presidential Scholar"]
+      degree: "M.Sc. in Telecommunications",
+      department: "Institut National des Postes et Télécommunications",
+      university: "Institut National des Postes et Télécommunications",
+      location: "Rabat, Morocco",
+      period: "September 2007 – June 2010",
+      description: "Specialized in computational systems and network design, with applications in urban planning and technology integration.",
+      highlights: [
+        "Demonstrating excellence in engineering and technical applications"
+      ],
+      thesis: "Conceiving and Designing a Safe and Optimized Local Network for the Mohamed-6 Foundation"
+    },
+    {
+      degree: "B.Sc. in Mathematics and Physics",
+      department: "Preparatory Classes for Engineering Schools",
+      university: "Classes Préparatoires des Grandes Écoles d’Ingénieur",
+      location: "Marrakech, Morocco",
+      period: "September 2004 – June 2007",
+      description: "Developed a strong analytical foundation in mathematics and physics, preparing for advanced studies in engineering.",
+      highlights: [
+        "Ranked 380th out of more than 4,000 candidates in the national final two-year exam in Morocco"
+      ]
     }
   ],
   skills: [
     {
-      title: "Urban Analytics",
-      area: "Research",
-      tldr: "Expert in analyzing urban data patterns"
+        title: "Urban Analytics and Planning",
+        area: "Research",
+        tldr:"Expert in analyzing urban data patterns and modeling spatial phenomena using advanced statistical techniques",
     },
-    { title: "Data Analysis", area: "Technical", tldr: "Proficient in R, Python, and GIS software" },
-    { title: "Urban Planning", area: "Domain", tldr: "Expertise in sustainable urban development" },
-    { title: "Project Management", area: "Soft Skills", tldr: "Led multiple research projects and teams" }
-  ]
+    {
+        title: "Transportation Modeling and Simulation",
+        area: "Technical",
+        tldr: "Proficient in transportation modeling using software such as INRO’s EMME, Bentley CUBE, TransCAD, and PTV Visum/Vissim for urban mobility modeling and optimization"
+    },
+    {
+       title: "Data Analysis and Machine Learning",
+        area: "Technical",
+        tldr: "Proficient in Python, R, SPSS, and STATA for predictive analytics and urban decision-making"
+    },
+    {
+        title: "Geographic Information Systems (GIS)",
+        area: "Technical",
+        tldr: "Advanced skills in GIS platforms (ArcGIS Pro, QGIS, and CityEngine) for spatial analysis and urban planning projects"
+    },
+    {
+        title: "Scientific Research and Publication",
+        area: "Research",
+        tldr: "Published over 10 peer-reviewed articles in transportation, urban studies, and sustainable mobility journals"
+    },
+    {
+        title: "Project Management and Team Leadership",
+        area: "Soft Skills",
+        tldr: "Managed multi-phase projects in urban mobility and smart cities, coordinating diverse teams and achieving project goals"
+    },
+    {
+        title: "Academic Mentorship and Knowledge Transfer",
+        area: "Soft Skills",
+        tldr: "Mentored graduate students and junior researchers, fostering their development in urban planning and analytics"
+    },
+    {
+        title: "Public Speaking and Conference Presentations",
+        area: "Soft Skills",
+        tldr: "Presented research findings at international conferences, including sessions on sustainable mobility and urban equity"
+    }
+    ]
 }
 
 export const publications = [
   {
-    title: "Machine Learning Applications in Urban Planning",
-    description: "A comprehensive review of how machine learning is transforming urban planning practices.",
-    year: 2023,
-    journal: "Journal of Urban Technology",
-    link: "/publications/ml-urban-planning"
+    title: "Optimizing shared bike systems for economic gain: Integrating land use and retail",
+    journal: "Journal of Transport Geography",
+    description: "The study focuses on optimizing shared-bike station locations in Seoul, emphasizing the role of cycling in promoting low-carbon mobility and economic revitalization. A unique approach was used, incorporating the retail activity index, land-use mix, transit proximity, and population and employment densities to determine optimal station locations",
+    year: "2024",
+    link: "https://www.sciencedirect.com/science/article/pii/S0966692324001297?via%3Dihub"
   },
   {
-    title: "Sustainable Urban Development Patterns",
-    description: "Analysis of sustainable development patterns in major metropolitan areas.",
-    year: 2023,
-    journal: "Sustainability Science",
-    link: "/publications/sustainable-development"
+    title: "Locating carbon neutral mobility hubs using artificial intelligence techniques",
+    journal: "Energy Sources, Part A: Recovery, Utilization, and Environmental Effects",
+    description: "The study explores the use of Genetic Algorithms (GA) and the Ensemble methods like Random Forest Regressor and XGBoost for optimizing mobility hub locations while reducing travel time and carbon emissions",
+    year: "2024",
+    link: "https://www.nature.com/articles/s41598-024-62701-z"
   },
   {
-    title: "Smart City Infrastructure Integration",
-    description: "Framework for integrating smart technologies into existing city infrastructure.",
-    year: 2022,
-    journal: "Smart Cities Review",
-    link: "/publications/smart-infrastructure"
+    title: "The elasticity and efficiency of carbon reduction strategies in transportation",
+    journal: "Energy Sources, Part A: Recovery, Utilization, and Environmental Effects",
+    description: "The study focuses on evaluating the effectiveness of various transport carbon mitigation policies, addressing knowledge gaps and providing a comparative overview. A model using mixed-effects meta-regression and carbon elasticity was employed to assess policies like shared bikes, mobility hubs, low emission zones, congestion pricing, electric vehicles, and hydrogen vehicles",
+    year: "2024",
+    link: "https://www.tandfonline.com/doi/full/10.1080/15567036.2023.2276380"
+  },
+  {
+    title: "A Planning Support System for Boosting Bikeability in Seoul",
+    journal: "International Conference on Computers in Urban Planning and Urban Management",
+    description: "The research discusses the development of a Planning Support System (PSS) aimed at improving the shared-bike system in Seoul, Korea, by using a bikeability index. The study identifies key global and local variables affecting the system's efficacy and develops change scenarios to enhance performance",
+    year: "2023",
+    link: "https://link.springer.com/chapter/10.1007/978-3-031-31746-0_9"
+  },
+  {
+    title: "Mining groups of factors influencing bus/minibus crash severities on poor pavement condition roads considering different lighting status",
+    journal: "Traffic Injury Prevention",
+    description: "The study uses data mining to identify crash-risk factors for bus/minibus crashes on poor roads under different lighting conditions: daylight, night with streetlights, and night without streetlight.",
+    year: "2022",
+    link: "https://www.tandfonline.com/doi/full/10.1080/15389588.2022.2066658"
+  },
+  {
+    title: "Urban form and public transport design",
+    journal: "Urban Form and Accessibility",
+    description: "The study explores the relationship between urban form and public transport design, highlighting how city characteristics influence transport systems. And it discusses guidelines from authorities and researchers aimed at improving public transport services and promoting urban sustainability by enhancing access, walking, and biking ",
+    year: "2021",
+    link: "https://www.sciencedirect.com/science/article/abs/pii/B9780128198223000183?via%3Dihub"
   }
 ]
 export const news = [
@@ -299,58 +386,15 @@ export const news = [
 ];
 export const teachingData = [
   {
-    title: "Introduction to Urban Planning",
-    years: "2023-Present",
-    description: "Fundamental concepts and principles of urban planning for undergraduate students",
-    materials: [
-      { name: "Lecture Slides", url: "/materials/urban-planning-slides.pdf" },
-      { name: "Course Notes", url: "/materials/urban-planning-notes.pdf" }
-    ]
+    title: "Advanced Research and Analysis Methods",
+    years: "2024",
+    description: "Fundamental concepts and principles for conducting research for graduate students. Also possible practical methods to be implemented in a variety of research problems and questions.",
   },
-  {
-    title: "Sustainable City Development",
-    years: "2023-Present",
-    description: "Advanced concepts in sustainable urban development for graduate students",
-    materials: [
-      { name: "Course Materials", url: "/materials/sustainable-dev-materials.pdf" },
-      { name: "Case Studies", url: "/materials/case-studies.pdf" }
-    ]
-  },
-  {
-    title: "Data Analytics for Urban Systems",
-    years: "2023-Present",
-    description: "Applied data analysis techniques for urban planning and systems",
-    materials: [
-      { name: "Analysis Templates", url: "/materials/analysis-templates.zip" },
-      { name: "Dataset Examples", url: "/materials/datasets.zip" }
-    ]
-  }
+ 
 ]
 
-export const blogArticles = [
-  //link here means the link to that particular blog post/article
-  {
-    id: 1,
-    title: "The Future of Smart Cities: Integrating IoT and AI",
-    year: 2023,
-    tldr: "Exploring how Internet of Things (IoT) and Artificial Intelligence (AI) are shaping the future of urban planning and city management.",
-    link: "/blog/future-of-smart-cities"
-  },
-  {
-    id: 2,
-    title: "Sustainable Urban Mobility: Challenges and Solutions",
-    year: 2023,
-    tldr: "Analyzing current challenges in urban transportation and proposing innovative solutions for sustainable mobility.",
-    link: "/blog/sustainable-urban-mobility"
-  },
-  {
-    id: 3,
-    title: "Green Building Technologies: A Path to Net-Zero Cities",
-    year: 2022,
-    tldr: "Examining cutting-edge green building technologies and their potential to create net-zero energy cities.",
-    link: "/blog/green-building-technologies"
-  }
-]
+export const blogArticles =    "Coming Soon"
+
 
 //Please include the links to the different websites here
 //Example: const blogLink = "https://www.example.com"
@@ -361,10 +405,16 @@ export const LinkToPublications = ""
 export const LinkToProjects = ""
 export const LinkToContact = ""
 export const LinkToNews = ""
-export const AboutData = " As a Ph.D. Assistant Research Professor in the Department of ... at the ... University, I am dedicated to bridging the gap between academic research and real-world applications in urban planning and sustainability."
-export const AcademicBackground = "With a Ph.D. in ..., my research journey has been focused on developing innovative solutions for urban challenges through the application of data analytics and machine learning technologies."
+export const AboutData = "As an Assistant Professor in the Department of Transportation Engineering at the University of Seoul, I am committed to advancing sustainable urban mobility and smart city development. My work bridges academic research and practical applications, driving impactful solutions in urban planning, transportation systems optimization, and environmental sustainability."
+export const AcademicBackground = "With a Ph.D. in Transportation Engineering and Smart Cities, my academic journey has been dedicated to addressing complex urban challenges. By leveraging data analytics, machine learning, and GIS technologies, I have developed innovative frameworks that integrate sustainability and equity into urban and transportation planning."
 
-//Include the image in the /public/images folder and name it as YunheeAboutImage.jpg. Then add it here as a string. Alternatively, if you have the image stored on the web, you can include the https:// link to the image between the string
-export const YunheeAboutImage = "/public/images/yubhee-pp.jpg"
+export const YunheeAboutImage = "/images/yunhee-pp.jpg"
+export const email = "lyunhee42@gmail.com"
+export const googleScholarProfileLink=""
+export const linkedInProfileLink=""
+export const researchGateProfileLink=""
+export const facebookProfileLink=""
+export const twitterProfileLink=""
+export const githubProfileLink=""
 
 

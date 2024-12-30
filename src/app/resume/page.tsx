@@ -17,6 +17,7 @@ interface ResumeData {
   projects: Array<{
     name: string;
     description: string;
+    year: string | number;
   }>;
   teaching: Array<{
     course: string;
@@ -70,55 +71,55 @@ export default function Resume() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-12">
       <div className="max-w-4xl mx-auto px-4">
-      <div className={`flex flex-col gap-4 md:flex-row md:items-center justify-between  ${theme.spacing.section}`}>
-        <motion.h1 
-          className={`text-4xl font-bold text-${theme.colors.primary}`}
-          {...animations.headerAnimation}
-        >
-          Research Projects
-        </motion.h1>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className=""
-        >
-          <Button 
-            asChild 
-            variant="link" 
-              className="text-lg text-blue-900 border-2 border-blue-600 bg-white group relative"
+        <div className={`flex flex-col gap-4 md:flex-row md:items-center justify-between  ${theme.spacing.section}`}>
+          <motion.h1
+            className={`text-4xl font-bold text-${theme.colors.primary}`}
+            {...animations.headerAnimation}
           >
-            <a href={LinkToCV} className="flex items-center gap-2">
-              Download Resume
-              <Download className="h-5 w-5 bounce-y" />
-            </a>
-          </Button>
-        </motion.div>
+            {resumeData.title}
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className=""
+          >
+            <Button
+              asChild
+              variant="link"
+              className="text-lg text-blue-900 border-2 border-blue-600 bg-white group relative"
+            >
+              <a href={LinkToCV} className="flex items-center gap-2">
+                Download Resume
+                <Download className="h-5 w-5 bounce-y" />
+              </a>
+            </Button>
+          </motion.div>
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <div className="px-1">
             <TabsList className="flex min-w-full border rounded-lg p-1 bg-white shadow-sm mb-6 overflow-x-auto">
-              <TabsTrigger 
-                value="overview" 
+              <TabsTrigger
+                value="overview"
                 className="ml-8 md:ml-0 flex-1 min-w-[100px] data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700 rounded-md"
               >
                 Overview
               </TabsTrigger>
-              <TabsTrigger 
-                value="experience" 
+              <TabsTrigger
+                value="experience"
                 className="flex-1 min-w-[100px] data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
               >
                 Experience
               </TabsTrigger>
-              <TabsTrigger 
-                value="education" 
+              <TabsTrigger
+                value="education"
                 className="flex-1 min-w-[100px] data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
               >
                 Education
               </TabsTrigger>
-              <TabsTrigger 
-                value="skills" 
+              <TabsTrigger
+                value="skills"
                 className="flex-1 min-w-[100px] data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700"
               >
                 Skills
@@ -173,28 +174,29 @@ function OverviewTab({ data }: TabProps) {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-500">{project.description}</p>
+                <p className="text-sm text-slate-400 mt-1">{project.year}</p>
               </CardContent>
             </Card>
           ))}
-       
+
           <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-2"
-        >
-          <Button 
-            asChild 
-            variant="link" 
-            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="mt-2"
           >
-            <a href="/projects" className="flex items-center gap-2">
-           View all projects
-              <ArrowRight className="h-5 w-5 bounce-x" />
-            </a>
-          </Button>
-        </motion.div>
-       
+            <Button
+              asChild
+              variant="link"
+              className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+            >
+              <a href="/projects" className="flex items-center gap-2">
+                View all projects
+                <ArrowRight className="h-5 w-5 bounce-x" />
+              </a>
+            </Button>
+          </motion.div>
+
         </Section>
 
         <Section title="Teaching" icon={<GraduationCap className="h-5 w-5" />}>
@@ -204,26 +206,26 @@ function OverviewTab({ data }: TabProps) {
               <span className="text-sm text-slate-500 ml-2">({course.level})</span>
             </div>
           ))}
-       
-    
+
+
           <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-2"
-        >
-          <Button 
-            asChild 
-            variant="link" 
-            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="mt-2"
           >
-            <a href="/teaching" className="flex items-center gap-2">
-           View teaching details
-              <ArrowRight className="h-5 w-5 bounce-x" />
-            </a>
-          </Button>
-        </motion.div>
-     
+            <Button
+              asChild
+              variant="link"
+              className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+            >
+              <a href="/teaching" className="flex items-center gap-2">
+                View teaching details
+                <ArrowRight className="h-5 w-5 bounce-x" />
+              </a>
+            </Button>
+          </motion.div>
+
         </Section>
 
         <Section title="Languages" icon={<Languages className="h-5 w-5" />}>
@@ -241,25 +243,25 @@ function OverviewTab({ data }: TabProps) {
               <span className="text-sm text-slate-500 block">{pub.journal}, {pub.year}</span>
             </div>
           ))}
-     
+
           <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-2"
-        >
-          <Button 
-            asChild 
-            variant="link" 
-            className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="mt-2"
           >
-            <a href="/publications" className="flex items-center gap-2">
-           View all publications
-              <ArrowRight className="h-5 w-5 bounce-x" />
-            </a>
-          </Button>
-        </motion.div>
-        
+            <Button
+              asChild
+              variant="link"
+              className="text-lg text-white border-blue-600 bg-blue-600 group relative"
+            >
+              <a href="/publications" className="flex items-center gap-2">
+                View all publications
+                <ArrowRight className="h-5 w-5 bounce-x" />
+              </a>
+            </Button>
+          </motion.div>
+
         </Section>
       </div>
     </ScrollArea>
