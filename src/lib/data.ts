@@ -411,5 +411,10 @@ export const AcademicBackground = "With a Ph.D. in Transportation Engineering an
 export const YunheeAboutImage = "/images/yunhee-pp.jpg"
 export const email = "lyunhee42@gmail.com"
 export const googleScholarProfileLink=""
+export const linkedInProfileLink=""
+export const researchGateProfileLink=""
+export const facebookProfileLink=""
+export const twitterProfileLink=""
+export const githubProfileLink=""
 
 
