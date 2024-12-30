@@ -408,7 +408,8 @@ export const LinkToNews = ""
 export const AboutData = "As an Assistant Professor in the Department of Transportation Engineering at the University of Seoul, I am committed to advancing sustainable urban mobility and smart city development. My work bridges academic research and practical applications, driving impactful solutions in urban planning, transportation systems optimization, and environmental sustainability."
 export const AcademicBackground = "With a Ph.D. in Transportation Engineering and Smart Cities, my academic journey has been dedicated to addressing complex urban challenges. By leveraging data analytics, machine learning, and GIS technologies, I have developed innovative frameworks that integrate sustainability and equity into urban and transportation planning."
 
-//Include the image in the /public/images folder and name it as YunheeAboutImage.jpg. Then add it here as a string. Alternatively, if you have the image stored on the web, you can include the https:// link to the image between the string
 export const YunheeAboutImage = "/images/yunhee-pp.jpg"
+export const email = "lyunhee42@gmail.com"
+export const googleScholarProfileLink=""
 
 
