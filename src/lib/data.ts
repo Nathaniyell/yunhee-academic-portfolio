@@ -281,14 +281,46 @@ export const resumeData = {
   ],
   skills: [
     {
-      title: "Urban Analytics",
-      area: "Research",
-      tldr: "Expert in analyzing urban data patterns"
+        title: "Urban Analytics and Planning",
+        area: "Research",
+        tldr:"Expert in analyzing urban data patterns and modeling spatial phenomena using advanced statistical techniques",
     },
-    { title: "Data Analysis", area: "Technical", tldr: "Proficient in R, Python, and GIS software" },
-    { title: "Urban Planning", area: "Domain", tldr: "Expertise in sustainable urban development" },
-    { title: "Project Management", area: "Soft Skills", tldr: "Led multiple research projects and teams" }
-  ]
+    {
+        title: "Transportation Modeling and Simulation",
+        area: "Technical",
+        tldr: "Proficient in transportation modeling using software such as INRO’s EMME, Bentley CUBE, TransCAD, and PTV Visum/Vissim for urban mobility modeling and optimization"
+    },
+    {
+       title: "Data Analysis and Machine Learning",
+        area: "Technical",
+        tldr: "Proficient in Python, R, SPSS, and STATA for predictive analytics and urban decision-making"
+    },
+    {
+        title: "Geographic Information Systems (GIS)",
+        area: "Technical",
+        tldr: "Advanced skills in GIS platforms (ArcGIS Pro, QGIS, and CityEngine) for spatial analysis and urban planning projects"
+    },
+    {
+        title: "Scientific Research and Publication",
+        area: "Research",
+        tldr: "Published over 10 peer-reviewed articles in transportation, urban studies, and sustainable mobility journals"
+    },
+    {
+        title: "Project Management and Team Leadership",
+        area: "Soft Skills",
+        tldr: "Managed multi-phase projects in urban mobility and smart cities, coordinating diverse teams and achieving project goals"
+    },
+    {
+        title: "Academic Mentorship and Knowledge Transfer",
+        area: "Soft Skills",
+        tldr: "Mentored graduate students and junior researchers, fostering their development in urban planning and analytics"
+    },
+    {
+        title: "Public Speaking and Conference Presentations",
+        area: "Soft Skills",
+        tldr: "Presented research findings at international conferences, including sessions on sustainable mobility and urban equity"
+    }
+    ]
 }
 
 export const publications = [
