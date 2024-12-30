@@ -104,7 +104,7 @@ export default function BlogPage() {
                 className="text-center py-20"
               >
                 <h2 className="text-2xl font-semibold text-blue-600 mb-4">Coming Soon</h2>
-                <p className="text-slate-500">Our blog articles are currently being prepared. Check back soon!</p>
+                <p className="text-slate-500">Blog articles are currently being prepared. Check back soon!</p>
               </motion.div>
             ) : (
               filteredArticles.length > 0 ? (
