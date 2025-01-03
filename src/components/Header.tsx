@@ -1,9 +1,9 @@
 "use client"
-import { UserRound } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { navigation } from '@/lib/data'
+import { navigation, name, YunheeAboutImage} from '@/lib/data'
+import Image from 'next/image'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,8 +16,8 @@ const Header = () => {
           {/* Logo/Name */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <UserRound className="w-8 h-8 text-blue-600" />
-              <span className="font-bold text-xl text-gray-900">Yunhee Lee</span>
+              <Image src={YunheeAboutImage} alt={`"Professor ${name}"`} width={32} height={32} className="rounded-full" />
+              <span className="font-bold text-xl text-gray-900">{name}</span>
             </Link>
           </div>
 
