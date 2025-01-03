@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ChevronRight, BookOpen, PenTool, ArrowRight, Download } from 'lucide-react'
-import { publications, blogArticles, theme, animations, LinkToPublications, AboutData, AcademicBackground, LinkToCV, resumeData, heroContent } from '@/lib/data'
+import { publications, blogArticles, theme, animations, LinkToPublications, AboutData, AcademicBackground, LinkToCV, resumeData, heroContent, name } from '@/lib/data'
 import Image from 'next/image'
 
 export default function AboutPage() {
@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className={`relative h-[500px] ${theme.layout.borderRadius} overflow-hidden ${theme.layout.shadow}`}>
             <Image
               src={heroContent.image}
-              alt="Professor Yunhee Lee"
+              alt={`"Professor ${name}"`}
               className="object-cover"
               fill
               priority

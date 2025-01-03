@@ -11,7 +11,7 @@ import Hero from '@/components/Hero'
 import Image from 'next/image'
 // import aboutImg from "@/public/images/about2.jpg"
 import SectionHeader from '@/components/SectionHeader'
-import { AboutData, LinkToCV, YunheeAboutImage, resumeData, publications } from '@/lib/data'
+import { AboutData, LinkToCV, YunheeAboutImage, resumeData, publications, name } from '@/lib/data'
 
 export default function Home() {
   return (
@@ -35,7 +35,7 @@ function AboutSection() {
       <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 className="text-3xl font-bold mb-4">Hello! I&apos;m <span className="text-blue-600">Yunhee Lee</span></h1>
+            <h1 className="text-3xl font-bold mb-4">Hello! I&apos;m <span className="text-blue-600">{name}</span></h1>
             <p className="text-lg text-slate-500 mb-6">
               {AboutData}
             </p>
@@ -55,7 +55,7 @@ function AboutSection() {
           <div className="relative h-[400px]">
             <Image
               src={YunheeAboutImage}
-              alt="Professor Yunhee Lee"
+              alt={`"Professor ${name}"`}
               fill
               className="rounded shadow object-center"
               priority

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+// import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { resumeData, theme, animations, LinkToProjects } from '@/lib/data'
 import { ArrowRight } from 'lucide-react'
@@ -51,11 +51,11 @@ export default function ProjectPage() {
                   </CardHeader>
                   <CardContent>
                     <p className={`text-${theme.colors.text.secondary} ${theme.spacing.element}`}>{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
+                    {/* <div className="flex flex-wrap gap-2">
                       {resumeData.areasOfInterest.slice(0, 2).map((area) => (
                         <Badge key={area} variant="secondary">{area}</Badge>
                       ))}
-                    </div>
+                    </div> */}
                   </CardContent>
                 </Card>
               </motion.div>
